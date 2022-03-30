@@ -6,9 +6,9 @@ build:
 run:
 	docker run --name kaldi-coraa-train-${USER} \
 		-it \
-		-v /home/asr/docker-kaldi-coraa-pt/models/:/models \
-		-v /home/asr/docker-kaldi-coraa-pt/data/:/data \
-		-v /home/asr/docker-kaldi-coraa-pt/scripts/:/root/scripts \
+		-v ${HOME}/docker-kaldi-coraa-pt/models/:/models \
+		-v ${HOME}/docker-kaldi-coraa-pt/data/:/data \
+		-v ${HOME}/docker-kaldi-coraa-pt/scripts/:/root/scripts \
 		kaldi-coraa-train-${USER} \
 		bash
 

@@ -6,7 +6,7 @@
 # Apache 2.0
 
 data=/data
-jobs=92
+jobs=3
 lm_name="lm_vaudimus_small.arpa.gz"
 
 . ./cmd.sh
@@ -27,10 +27,8 @@ if [ $stage -le -2 ]; then
   #python3 local/data_split.py $data validated.csv consulta_31_05_2020-06_06_2020.csv $data/clips/radios
   #python3 $HOME/kaldi/global_pt_data/preprocess/data_to_all.py $HOME/kaldi/global_pt_data/ all.csv
 
-  mv $data/metadata_train_final.csv $data/cv-valid-train.csv
-  mv $data/metadata_dev_final.csv $data/cv-valid-test.csv
-
-  stage=-1
+  mv $data/sample_metadata_train_final.csv $data/cv-valid-train.csv
+  mv $data/sample_metadata_dev_final.csv $data/cv-valid-test.csv
 fi
 
 if [ $stage -le -1 ]; then
@@ -45,8 +43,6 @@ if [ $stage -le -1 ]; then
   # Pronunciations for OOV words are obtained using a pre-trained Sequitur model
 
   local/prepare_dict.sh
-
-  stage=0
 fi
 
 if [ $stage -le 0 ]; then
@@ -55,8 +51,6 @@ if [ $stage -le 0 ]; then
     '<unk>' data/local/lang data/lang || exit 1
  
   utils/format_lm.sh data/lang /models/$lm_name data/local/dict/lexicon.txt data/lang_test/  
-
-  stage=1
 fi
 
 wait
@@ -81,8 +75,6 @@ if [ $stage -le 1 ]; then
   #utils/subset_data_dir.sh --shortest data/valid_train 27800 data/train_27kshort || exit 1;
   #utils/subset_data_dir.sh data/valid_train 18200 data/train_20k || exit 1;
   #utils/subset_data_dir.sh data/valid_train 20000 data/train_20k || exit 1;
-
-  stage=2
 fi
 
 if [ $stage -le 2 ]; then
@@ -90,15 +82,13 @@ if [ $stage -le 2 ]; then
 
   # Get the shortest 27000 utterances first because those are more likely
   # to have accurate alignments.
-  #utils/subset_data_dir.sh --shortest data/valid_train 60316 data/train_60kshort || exit 1;
-
-  stage=3
+  utils/subset_data_dir.sh --shortest data/valid_train 60316 data/train_60kshort || exit 1;
 fi
 
 # train a monophone system
 if [ $stage -le 3 ]; then
   steps/train_mono.sh --boost-silence 1.25 --nj $jobs --cmd "$train_cmd" \
-    data/valid_train data/lang exp/mono || exit 1;
+    data/train_60kshort data/lang exp/mono || exit 1;
   (
     utils/mkgraph.sh data/lang_test exp/mono exp/mono/graph
     for testset in valid_test; do
@@ -108,9 +98,7 @@ if [ $stage -le 3 ]; then
     done
   )&
   steps/align_si.sh --boost-silence 1.25 --nj $jobs --cmd "$train_cmd" \
-    data/valid_train data/lang exp/mono exp/mono_ali_train
-
-  stage=4
+    data/train data/lang exp/mono exp/mono_ali_train
 fi
 
 # 57  60316
@@ -119,7 +107,7 @@ fi
 # train a first delta + delta-delta triphone system
 if [ $stage -le 4 ]; then
   steps/train_deltas.sh --boost-silence 1.25 --cmd "$train_cmd" \
-    2000 10000 data/valid_train data/lang exp/mono_ali_train exp/tri1
+    2000 10000 data/valid_train data/lang exp/mono exp/tri1
 
   # decode using the tri1 model
   (
@@ -132,9 +120,7 @@ if [ $stage -le 4 ]; then
   )&
 
   steps/align_si.sh --nj $jobs --cmd "$train_cmd" \
-    data/valid_train data/lang exp/tri1 exp/tri1_ali_train
-
-  stage=5
+    data/train_60k data/lang exp/tri1 exp/tri1_ali_train_60k
 fi
  
 # 56.38 03/03/2021
@@ -144,7 +130,7 @@ fi
 if [ $stage -le 5 ]; then
   steps/train_lda_mllt.sh --cmd "$train_cmd" \
     --splice-opts "--left-context=3 --right-context=3" 2500 15000 \
-    data/valid_train data/lang exp/tri1_ali_train exp/tri2b
+    data/train_60kshort data/lang exp/tri1 exp/tri2b
   #2500 15000
 
   #steps/train_lda_mllt.sh --cmd "$train_cmd" \
@@ -163,15 +149,13 @@ if [ $stage -le 5 ]; then
 
   # Align utts using the tri2b model
   steps/align_si.sh --nj $jobs --cmd "$train_cmd" --use-graphs true \
-    data/valid_train data/lang exp/tri2b exp/tri2b_ali_train
-
-  stage=6
+    data/train_60kshort data/lang exp/tri2b exp/tri2b_ali_train_60k
 fi
 
 # Train tri3b, which is LDA+MLLT+SAT
 if [ $stage -le 6 ]; then
   steps/train_sat.sh --cmd "$train_cmd" 2500 15000 \
-    data/valid_train data/lang exp/tri2b_ali_train exp/tri3b
+    data/train_60kshort data/lang exp/tri2b_ali_train_60k exp/tri3b
 
   #2500 15000
 
@@ -183,24 +167,22 @@ if [ $stage -le 6 ]; then
     utils/mkgraph.sh data/lang_test exp/tri3b exp/tri3b/graph
     for testset in valid_test; do
       steps/decode_fmllr.sh --nj $jobs --cmd "$decode_cmd" \
-        exp/tri3b/graph data/$testset exp/tri3b/decode_$testset
+        exp/tri3b/graph data/$teststri3b_ali_train_60k exp/tri3b/decode_$testset
       #steps/decode_fmllr.sh --nj 2 exp/tri3b/graph data/$testset exp/tri3b/decode_$testset
     done
   )&
-
-  stage=7
 fi
 
 if [ $stage -le 7 ]; then
   # Align utts in the full training set using the tri3b model
   steps/align_fmllr.sh --nj $jobs --cmd "$train_cmd" \
     data/valid_train data/lang \
-    exp/tri3b exp/tri3b_ali_train
+    exp/tri3b exp/tri3b_ali_valid_train
 
   # train another LDA+MLLT+SAT system on the entire training set
   steps/train_sat.sh  --cmd "$train_cmd" 4200 40000 \
     data/valid_train data/lang \
-    exp/tri3b_ali_train exp/tri4b
+    exp/tri3b_ali_valid_train exp/tri4b
 
   #steps/train_sat.sh 420 4000 data/valid_train data/lang exp/tri3b_ali_valid_train exp/tri4b
 
@@ -214,8 +196,6 @@ if [ $stage -le 7 ]; then
       #steps/decode_fmllr.sh --nj 2 exp/tri4b/graph data/$testset exp/tri4b/decode_$testset
     done
   )&
-
-  stage=8
 fi
 
 # 39 13/03/8
@@ -224,8 +204,6 @@ if [ $stage -le 8 ]; then
   for part in valid_train valid_test; do
     utils/data/fix_data_dir.sh data/$part
   done
-
-  stage=9
 fi
 
 # Train a chain model

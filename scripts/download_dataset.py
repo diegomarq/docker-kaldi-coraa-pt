@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 import os
 import gdown
 import zipfile
@@ -14,10 +15,12 @@ if __name__ == '__main__':
 
     if not Path(file2).is_file():
         url2 = "https://drive.google.com/u/0/uc?id=1D1ft4F37zLjmGxQyhfkdjSs9cJzOL3nI"
+        print(f"Downloading {file2}")
         gdown.download(url2, file2, quiet=False)
 
     if not Path(file1).is_file():
         url1 = "https://drive.google.com/u/0/uc?id=1deCciFD35EA_OEUl0MrEDa7u5O2KgVJM"
+        print(f"Downloading {file1}")
         gdown.download(url1, file1, quiet=False)
 
     if not Path(file1).is_file():

@@ -119,8 +119,8 @@ RUN cp /root/scripts/prepare_lm.sh .
 RUN chmod +x prepare_dict.sh
 RUN chmod +x prepare_lm.sh
 
-RUN local/nnet3/run_ivector_common.sh local/nnet3/run_ivector_common_old.sh
-RUN cp root/scripts/run_ivector_common.sh local/nnet3/run_ivector_common.sh
+RUN mv nnet3/run_ivector_common.sh nnet3/run_ivector_common_old.sh
+RUN cp /root/scripts/run_ivector_common.sh nnet3/run_ivector_common.sh
 
 RUN cd /root/kaldi/egs/commonvoice/s5/local/chain/tuning
 WORKDIR /root/kaldi/egs/commonvoice/s5/local/chain/tuning
@@ -128,7 +128,7 @@ WORKDIR /root/kaldi/egs/commonvoice/s5/local/chain/tuning
 RUN mv run_tdnn_1a.sh run_tdnn_1a_old.sh
 RUN cp /root/scripts/run_tdnn_1a.sh .
 
-RUN chmod +x run_tdnn.sh
+RUN chmod +x run_tdnn_1a.sh
 
 #
 RUN cd /root

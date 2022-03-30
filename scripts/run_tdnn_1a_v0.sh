@@ -15,13 +15,13 @@ set -euo pipefail
 
 # First the options that are passed through to run_ivector_common.sh
 # (some of which are also used in this script directly).
-num_jobs=92
+num_jobs=4
 
-stage=0
+stage=14
 decode_nj=$num_jobs
 train_set=valid_train
 test_sets="valid_test"
-gmm=tri4b
+gmm=tri5b
 nnet3_affix=
 
 # The rest are configs specific to this script.  Most of the parameters
@@ -34,7 +34,7 @@ decode_iter=
 
 # training options
 # training chunk-options
-chunk_width=150,110,100
+chunk_width=140,100,160
 # we don't need extra left/right context for TDNN systems.
 chunk_left_context=0
 chunk_right_context=0
@@ -134,7 +134,7 @@ if [ $stage -le 12 ]; then
   steps/nnet3/chain/build_tree.sh \
     --frame-subsampling-factor 3 \
     --context-opts "--context-width=2 --central-position=1" \
-    --cmd "$train_cmd" 7000 ${lores_train_data_dir} \
+    --cmd "$train_cmd" 4200 ${lores_train_data_dir} \
     $lang $ali_dir $tree_dir
 fi
 
@@ -203,10 +203,10 @@ if [ $stage -le 14 ]; then
     --chain.lm-opts="--num-extra-lm-states=2000" \
     --trainer.srand=$srand \
     --trainer.max-param-change=2.0 \
-    --trainer.num-epochs=10 \
+    --trainer.num-epochs=4 \
     --trainer.frames-per-iter=1500000 \
-    --trainer.optimization.num-jobs-initial=80 \
-    --trainer.optimization.num-jobs-final=92 \
+    --trainer.optimization.num-jobs-initial=70 \
+    --trainer.optimization.num-jobs-final=78 \
     --trainer.optimization.initial-effective-lrate=0.001 \
     --trainer.optimization.final-effective-lrate=0.0001 \
     --trainer.optimization.shrink-value=1.0 \

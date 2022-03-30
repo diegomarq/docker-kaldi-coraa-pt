@@ -10,13 +10,13 @@ set -euo pipefail
 # iVector-related parts of the script.  See those scripts for examples
 # of usage.
 
-stage=0
+stage=2
 train_set=valid_train
 test_sets="valid_test"
 gmm=tri4b
-num_jobs=92
+num_jobs=3
 
-nnet3_affix=
+nnet3_affix=new
 
 . ./cmd.sh
 . ./path.sh
