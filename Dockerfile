@@ -73,7 +73,8 @@ RUN apt update -q && \
 	openjdk-11-jdk \
 	dos2unix \
 	unzip \
-	tree
+	tree \
+	zip
 
 RUN cd /root
 WORKDIR /root

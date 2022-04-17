@@ -1,0 +1,1599 @@
+/data/cv-valid-train.csv 
+utils/fix_data_dir.sh: file data/valid_train/utt2spk is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/valid_train/spk2utt is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/valid_train/text is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/valid_train/wav.scp is not in sorted order or not unique, sorting it
+fix_data_dir.sh: kept all 382258 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train
+/data/cv-valid-test.csv 
+utils/fix_data_dir.sh: file data/valid_test/utt2spk is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/valid_test/spk2utt is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/valid_test/text is not in sorted order or not unique, sorting it
+utils/fix_data_dir.sh: file data/valid_test/wav.scp is not in sorted order or not unique, sorting it
+fix_data_dir.sh: kept all 7522 utterances.
+fix_data_dir.sh: old files are kept in data/valid_test/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_test
+=== Building a language model ...
+scanning data/local/corpus.txt ...
+*** Finished building the LM model!
+=== Preparing the dictionary ...
+--- Preparing pronunciations for OOV words ...
+[VOW] #3d# stress vowel not found!
+[G2P] Error while processing word '3d', skipping char '3'. There may be errors at phoneme output
+[VOW] #aacd# stress vowel not found!
+[VOW] #abby# stress vowel not found!
+[VOW] #abc# stress vowel not found!
+[VOW] #abd# stress vowel not found!
+[VOW] #accioly# stress vowel not found!
+[VOW] #ach# stress vowel not found!
+[VOW] #aciolly# stress vowel not found!
+[VOW] #act# stress vowel not found!
+[VOW] #acth# stress vowel not found!
+[VOW] #add# stress vowel not found!
+[VOW] #adh# stress vowel not found!
+[VOW] #adm# stress vowel not found!
+[VOW] #adp# stress vowel not found!
+[VOW] #ads# stress vowel not found!
+[VOW] #advanceds# stress vowel not found!
+[VOW] #aff# stress vowel not found!
+[VOW] #agrosmart# stress vowel not found!
+[VOW] #ahm# stress vowel not found!
+[VOW] #albany# stress vowel not found!
+[VOW] #albert# stress vowel not found!
+[VOW] #alg# stress vowel not found!
+[VOW] #amb# stress vowel not found!
+[VOW] #amh# stress vowel not found!
+[VOW] #amp# stress vowel not found!
+[VOW] #amy# stress vowel not found!
+[VOW] #and# stress vowel not found!
+[VOW] #andy# stress vowel not found!
+[VOW] #anh# stress vowel not found!
+[VOW] #anthony# stress vowel not found!
+[VOW] #antony# stress vowel not found!
+[VOW] #app# stress vowel not found!
+[VOW] #approach# stress vowel not found!
+[VOW] #apps# stress vowel not found!
+[VOW] #arbnb# stress vowel not found!
+[VOW] #arendt# stress vowel not found!
+[VOW] #arm# stress vowel not found!
+[VOW] #arnold# stress vowel not found!
+[VOW] #arns# stress vowel not found!
+[VOW] #ars# stress vowel not found!
+[VOW] #art# stress vowel not found!
+[VOW] #arts# stress vowel not found!
+[VOW] #ascent# stress vowel not found!
+[VOW] #ass# stress vowel not found!
+[VOW] #atp# stress vowel not found!
+[VOW] #auerbach# stress vowel not found!
+[VOW] #b# stress vowel not found!
+[VOW] #baby# stress vowel not found!
+[VOW] #babydolls# stress vowel not found!
+[VOW] #bach# stress vowel not found!
+[VOW] #back# stress vowel not found!
+[VOW] #backing# stress vowel not found!
+[VOW] #backs# stress vowel not found!
+[VOW] #bady# stress vowel not found!
+[VOW] #balangandans# stress vowel not found!
+[VOW] #band# stress vowel not found!
+[VOW] #bang# stress vowel not found!
+[VOW] #bank# stress vowel not found!
+[VOW] #banks# stress vowel not found!
+[VOW] #banners# stress vowel not found!
+[VOW] #barrick# stress vowel not found!
+[VOW] #bb# stress vowel not found!
+[VOW] #bcg# stress vowel not found!
+[VOW] #bears# stress vowel not found!
+[VOW] #beats# stress vowel not found!
+[VOW] #beck# stress vowel not found!
+[VOW] #belford# stress vowel not found!
+[VOW] #benchmark# stress vowel not found!
+[VOW] #bennett# stress vowel not found!
+[VOW] #bens# stress vowel not found!
+[VOW] #bents# stress vowel not found!
+[VOW] #berdiaeff# stress vowel not found!
+[VOW] #bernard# stress vowel not found!
+[VOW] #bertold# stress vowel not found!
+[VOW] #best# stress vowel not found!
+[VOW] #beth# stress vowel not found!
+[VOW] #billings# stress vowel not found!
+[VOW] #billy# stress vowel not found!
+[VOW] #bing# stress vowel not found!
+[VOW] #biomarkers# stress vowel not found!
+[VOW] #birk# stress vowel not found!
+[VOW] #bits# stress vowel not found!
+[VOW] #black# stress vowel not found!
+[VOW] #blinc# stress vowel not found!
+[VOW] #block# stress vowel not found!
+[VOW] #bluetooth# stress vowel not found!
+[VOW] #blush# stress vowel not found!
+[VOW] #bm# stress vowel not found!
+[VOW] #board# stress vowel not found!
+[VOW] #boards# stress vowel not found!
+[VOW] #bock# stress vowel not found!
+[VOW] #body# stress vowel not found!
+[VOW] #bodyboard# stress vowel not found!
+[VOW] #boff# stress vowel not found!
+[VOW] #books# stress vowel not found!
+[VOW] #bopp# stress vowel not found!
+[VOW] #boys# stress vowel not found!
+[VOW] #brand# stress vowel not found!
+[VOW] #branding# stress vowel not found!
+[VOW] #brastemp# stress vowel not found!
+[VOW] #breakfast# stress vowel not found!
+[VOW] #brecht# stress vowel not found!
+[VOW] #breck# stress vowel not found!
+[VOW] #brennand# stress vowel not found!
+[VOW] #bretch# stress vowel not found!
+[VOW] #brilh# stress vowel not found!
+[VOW] #brothers# stress vowel not found!
+[VOW] #brs# stress vowel not found!
+[VOW] #buck# stress vowel not found!
+[VOW] #buggy# stress vowel not found!
+[VOW] #bugs# stress vowel not found!
+[VOW] #bulls# stress vowel not found!
+[VOW] #bullying# stress vowel not found!
+[VOW] #bullyings# stress vowel not found!
+[VOW] #burnquist# stress vowel not found!
+[VOW] #burt# stress vowel not found!
+[VOW] #bush# stress vowel not found!
+[VOW] #by# stress vowel not found!
+[VOW] #bytes# stress vowel not found!
+[VOW] #c# stress vowel not found!
+[VOW] #c3# stress vowel not found!
+[G2P] Error while processing word 'c3', skipping char '3'. There may be errors at phoneme output
+[VOW] #calffanding# stress vowel not found!
+[VOW] #calls# stress vowel not found!
+[VOW] #camping# stress vowel not found!
+[VOW] #caps# stress vowel not found!
+[VOW] #capt# stress vowel not found!
+[VOW] #card# stress vowel not found!
+[VOW] #cars# stress vowel not found!
+[VOW] #cass# stress vowel not found!
+[VOW] #castells# stress vowel not found!
+[VOW] #casting# stress vowel not found!
+[VOW] #cavaliers# stress vowel not found!
+[VOW] #cbd# stress vowel not found!
+[VOW] #ccs# stress vowel not found!
+[VOW] #cents# stress vowel not found!
+[VOW] #cert# stress vowel not found!
+[VOW] #cesf# stress vowel not found!
+[VOW] #cesp# stress vowel not found!
+[VOW] #cest# stress vowel not found!
+[VOW] #cgc# stress vowel not found!
+[VOW] #cgt# stress vowel not found!
+[VOW] #ch# stress vowel not found!
+[VOW] #charts# stress vowel not found!
+[VOW] #check# stress vowel not found!
+[VOW] #checklist# stress vowel not found!
+[VOW] #chesf# stress vowel not found!
+[VOW] #chips# stress vowel not found!
+[VOW] #chopp# stress vowel not found!
+[VOW] #city# stress vowel not found!
+[VOW] #citybank# stress vowel not found!
+[VOW] #click# stress vowel not found!
+[VOW] #cliff# stress vowel not found!
+[VOW] #clock# stress vowel not found!
+[VOW] #cnpj# stress vowel not found!
+[VOW] #coach# stress vowel not found!
+[VOW] #coaching# stress vowel not found!
+[VOW] #coast# stress vowel not found!
+[VOW] #cold# stress vowel not found!
+[VOW] #collabs# stress vowel not found!
+[VOW] #collant# stress vowel not found!
+[VOW] #comp# stress vowel not found!
+[VOW] #company# stress vowel not found!
+[VOW] #conf# stress vowel not found!
+[VOW] #confort# stress vowel not found!
+[VOW] #conh# stress vowel not found!
+[VOW] #const# stress vowel not found!
+[VOW] #construtechs# stress vowel not found!
+[VOW] #cont# stress vowel not found!
+[VOW] #convens# stress vowel not found!
+[VOW] #copy# stress vowel not found!
+[VOW] #copydesk# stress vowel not found!
+[VOW] #corinthians# stress vowel not found!
+[VOW] #cortp# stress vowel not found!
+[VOW] #cptm# stress vowel not found!
+[VOW] #crabby# stress vowel not found!
+[VOW] #crack# stress vowel not found!
+[VOW] #craft# stress vowel not found!
+[VOW] #crh# stress vowel not found!
+[VOW] #criqm# stress vowel not found!
+[VOW] #croft# stress vowel not found!
+[VOW] #crops# stress vowel not found!
+[VOW] #crowdfunding# stress vowel not found!
+[VOW] #crowdfundings# stress vowel not found!
+[VOW] #cruls# stress vowel not found!
+[VOW] #crush# stress vowel not found!
+[VOW] #crusp# stress vowel not found!
+[VOW] #css# stress vowel not found!
+[VOW] #ct# stress vowel not found!
+[VOW] #cult# stress vowel not found!
+[VOW] #cults# stress vowel not found!
+[VOW] #curt# stress vowel not found!
+[VOW] #cury# stress vowel not found!
+[VOW] #cyberpunk# stress vowel not found!
+[VOW] #cyborgs# stress vowel not found!
+[VOW] #d# stress vowel not found!
+[VOW] #daenerys# stress vowel not found!
+[VOW] #dancing# stress vowel not found!
+[VOW] #dan?# stress vowel not found!
+[VOW] #darc# stress vowel not found!
+[VOW] #darcy# stress vowel not found!
+[VOW] #darth# stress vowel not found!
+[VOW] #days# stress vowel not found!
+[VOW] #dc# stress vowel not found!
+[VOW] #dd# stress vowel not found!
+[VOW] #ddt# stress vowel not found!
+[VOW] #deads# stress vowel not found!
+[VOW] #debby# stress vowel not found!
+[VOW] #demonstram# stress vowel not found!
+[VOW] #demonstrem# stress vowel not found!
+[VOW] #derby# stress vowel not found!
+[VOW] #dercy# stress vowel not found!
+[VOW] #desgast# stress vowel not found!
+[VOW] #designers# stress vowel not found!
+[VOW] #designs# stress vowel not found!
+[VOW] #desm# stress vowel not found!
+[VOW] #desprestend# stress vowel not found!
+[VOW] #dest# stress vowel not found!
+[VOW] #diagleph# stress vowel not found!
+[VOW] #dickens# stress vowel not found!
+[VOW] #dilts# stress vowel not found!
+[VOW] #dinners# stress vowel not found!
+[VOW] #disc# stress vowel not found!
+[VOW] #dist# stress vowel not found!
+[VOW] #dj# stress vowel not found!
+[VOW] #djisk# stress vowel not found!
+[VOW] #dogs# stress vowel not found!
+[VOW] #dpvat# stress vowel not found!
+[VOW] #drink# stress vowel not found!
+[VOW] #drinks# stress vowel not found!
+[VOW] #drops# stress vowel not found!
+[VOW] #drummond# stress vowel not found!
+[VOW] #ds# stress vowel not found!
+[VOW] #duchamp# stress vowel not found!
+[VOW] #dummont# stress vowel not found!
+[VOW] #dunk# stress vowel not found!
+[VOW] #dvd# stress vowel not found!
+[VOW] #dvds# stress vowel not found!
+[VOW] #earth# stress vowel not found!
+[VOW] #ebooks# stress vowel not found!
+[VOW] #ecosport# stress vowel not found!
+[VOW] #edward# stress vowel not found!
+[VOW] #els# stress vowel not found!
+[VOW] #emp# stress vowel not found!
+[VOW] #empreend# stress vowel not found!
+[VOW] #enc# stress vowel not found!
+[VOW] #enf# stress vowel not found!
+[VOW] #english# stress vowel not found!
+[VOW] #ens# stress vowel not found!
+[VOW] #ent# stress vowel not found!
+[VOW] #ernest# stress vowel not found!
+[VOW] #ernst# stress vowel not found!
+[VOW] #esc# stress vowel not found!
+[VOW] #esh# stress vowel not found!
+[VOW] #esp# stress vowel not found!
+[VOW] #ess# stress vowel not found!
+[VOW] #est# stress vowel not found!
+[VOW] #etc# stress vowel not found!
+[VOW] #exp# stress vowel not found!
+[VOW] #expans# stress vowel not found!
+[VOW] #expert# stress vowel not found!
+[VOW] #experts# stress vowel not found!
+[VOW] #f# stress vowel not found!
+[VOW] #fablabs# stress vowel not found!
+[VOW] #fank# stress vowel not found!
+[VOW] #fast# stress vowel not found!
+[VOW] #feedback# stress vowel not found!
+[VOW] #feedbacks# stress vowel not found!
+[VOW] #feelings# stress vowel not found!
+[VOW] #fert# stress vowel not found!
+[VOW] #fesp# stress vowel not found!
+[VOW] #field# stress vowel not found!
+[VOW] #fields# stress vowel not found!
+[VOW] #fifth# stress vowel not found!
+[VOW] #fitness# stress vowel not found!
+[VOW] #flash# stress vowel not found!
+[VOW] #flashback# stress vowel not found!
+[VOW] #flashbacks# stress vowel not found!
+[VOW] #fm# stress vowel not found!
+[VOW] #fmm# stress vowel not found!
+[VOW] #folk# stress vowel not found!
+[VOW] #follows# stress vowel not found!
+[VOW] #ford# stress vowel not found!
+[VOW] #form# stress vowel not found!
+[VOW] #fort# stress vowel not found!
+[VOW] #frank# stress vowel not found!
+[VOW] #frankfurt# stress vowel not found!
+[VOW] #frequent# stress vowel not found!
+[VOW] #friedrich# stress vowel not found!
+[VOW] #front# stress vowel not found!
+[VOW] #frost# stress vowel not found!
+[VOW] #fruts# stress vowel not found!
+[VOW] #fsh# stress vowel not found!
+[VOW] #funk# stress vowel not found!
+[VOW] #g# stress vowel not found!
+[VOW] #gadgets# stress vowel not found!
+[VOW] #gaslighting# stress vowel not found!
+[VOW] #gatt# stress vowel not found!
+[VOW] #gays# stress vowel not found!
+[VOW] #geeks# stress vowel not found!
+[VOW] #gent# stress vowel not found!
+[VOW] #gh# stress vowel not found!
+[VOW] #giddens# stress vowel not found!
+[VOW] #gift# stress vowel not found!
+[VOW] #gilbert# stress vowel not found!
+[VOW] #girls# stress vowel not found!
+[VOW] #glass# stress vowel not found!
+[VOW] #gloss# stress vowel not found!
+[VOW] #gogh# stress vowel not found!
+[VOW] #gold# stress vowel not found!
+[VOW] #golf# stress vowel not found!
+[VOW] #gols# stress vowel not found!
+[VOW] #grand# stress vowel not found!
+[VOW] #grandesh# stress vowel not found!
+[VOW] #granding# stress vowel not found!
+[VOW] #greenwich# stress vowel not found!
+[VOW] #greys# stress vowel not found!
+[VOW] #growth# stress vowel not found!
+[VOW] #gullart# stress vowel not found!
+[VOW] #gump# stress vowel not found!
+[VOW] #guppy# stress vowel not found!
+[VOW] #gutemberg# stress vowel not found!
+[VOW] #gutenberg# stress vowel not found!
+[VOW] #guthemberg# stress vowel not found!
+[VOW] #h# stress vowel not found!
+[VOW] #hackers# stress vowel not found!
+[VOW] #hacking# stress vowel not found!
+[VOW] #hamerschlak# stress vowel not found!
+[VOW] #hammm# stress vowel not found!
+[VOW] #hand# stress vowel not found!
+[VOW] #hands# stress vowel not found!
+[VOW] #happy# stress vowel not found!
+[VOW] #happys# stress vowel not found!
+[VOW] #hard# stress vowel not found!
+[VOW] #hardy# stress vowel not found!
+[VOW] #harry# stress vowel not found!
+[VOW] #harv# stress vowel not found!
+[VOW] #harvard# stress vowel not found!
+[VOW] #hawks# stress vowel not found!
+[VOW] #hawy# stress vowel not found!
+[VOW] #hcg# stress vowel not found!
+[VOW] #hd# stress vowel not found!
+[VOW] #health# stress vowel not found!
+[VOW] #heavy# stress vowel not found!
+[VOW] #heck# stress vowel not found!
+[VOW] #hellmanns# stress vowel not found!
+[VOW] #help# stress vowel not found!
+[VOW] #henry# stress vowel not found!
+[VOW] #high# stress vowel not found!
+[VOW] #highlights# stress vowel not found!
+[VOW] #hillary# stress vowel not found!
+[VOW] #hits# stress vowel not found!
+[VOW] #hmm# stress vowel not found!
+[VOW] #hmmm# stress vowel not found!
+[VOW] #hobby# stress vowel not found!
+[VOW] #hogwarts# stress vowel not found!
+[VOW] #hold# stress vowel not found!
+[VOW] #hong# stress vowel not found!
+[VOW] #hooks# stress vowel not found!
+[VOW] #hubs# stress vowel not found!
+[VOW] #huck# stress vowel not found!
+[VOW] #hulk# stress vowel not found!
+[VOW] #hunf# stress vowel not found!
+[VOW] #hw# stress vowel not found!
+[VOW] #hyde# stress vowel not found!
+[VOW] #hype# stress vowel not found!
+[VOW] #i# stress vowel not found!
+[VOW] #iang# stress vowel not found!
+[VOW] #iaps# stress vowel not found!
+[VOW] #ibdf# stress vowel not found!
+[VOW] #ibm# stress vowel not found!
+[VOW] #icms# stress vowel not found!
+[VOW] #iens# stress vowel not found!
+[VOW] #ihs# stress vowel not found!
+[VOW] #imb# stress vowel not found!
+[VOW] #imc# stress vowel not found!
+[VOW] #imp# stress vowel not found!
+[VOW] #impeachment# stress vowel not found!
+[VOW] #imt# stress vowel not found!
+[VOW] #inamps# stress vowel not found!
+[VOW] #inf# stress vowel not found!
+[VOW] #inputs# stress vowel not found!
+[VOW] #insight# stress vowel not found!
+[VOW] #insights# stress vowel not found!
+[VOW] #inst# stress vowel not found!
+[VOW] #int# stress vowel not found!
+[VOW] #interc# stress vowel not found!
+[VOW] #ipt# stress vowel not found!
+[VOW] #iss# stress vowel not found!
+[VOW] #j# stress vowel not found!
+[VOW] #jasc# stress vowel not found!
+[VOW] #jaspers# stress vowel not found!
+[VOW] #javascript# stress vowel not found!
+[VOW] #jeans# stress vowel not found!
+[VOW] #jeff# stress vowel not found!
+[VOW] #jimmy# stress vowel not found!
+[VOW] #jobbs# stress vowel not found!
+[VOW] #jobs# stress vowel not found!
+[VOW] #johnny# stress vowel not found!
+[VOW] #jonh# stress vowel not found!
+[VOW] #joystick# stress vowel not found!
+[VOW] #july# stress vowel not found!
+[VOW] #jung# stress vowel not found!
+[VOW] #k# stress vowel not found!
+[VOW] #kant# stress vowel not found!
+[VOW] #kart# stress vowel not found!
+[VOW] #karts# stress vowel not found!
+[VOW] #kelly# stress vowel not found!
+[VOW] #kennedy# stress vowel not found!
+[VOW] #kids# stress vowel not found!
+[VOW] #kierkegaard# stress vowel not found!
+[VOW] #king# stress vowel not found!
+[VOW] #kirtland# stress vowel not found!
+[VOW] #kiss# stress vowel not found!
+[VOW] #kits# stress vowel not found!
+[VOW] #kitsch# stress vowel not found!
+[VOW] #klink# stress vowel not found!
+[VOW] #koch# stress vowel not found!
+[VOW] #kong# stress vowel not found!
+[VOW] #kubibschek# stress vowel not found!
+[VOW] #kubistchek# stress vowel not found!
+[VOW] #kubitschek# stress vowel not found!
+[VOW] #kung# stress vowel not found!
+[VOW] #l# stress vowel not found!
+[VOW] #labs# stress vowel not found!
+[VOW] #lady# stress vowel not found!
+[VOW] #lamarck# stress vowel not found!
+[VOW] #lans# stress vowel not found!
+[VOW] #lan?# stress vowel not found!
+[VOW] #laptops# stress vowel not found!
+[VOW] #larg# stress vowel not found!
+[VOW] #lazy# stress vowel not found!
+[VOW] #learning# stress vowel not found!
+[VOW] #legrand# stress vowel not found!
+[VOW] #lets# stress vowel not found!
+[VOW] #letterings# stress vowel not found!
+[VOW] #lgbt# stress vowel not found!
+[VOW] #lgbts# stress vowel not found!
+[VOW] #lh# stress vowel not found!
+[VOW] #lhrh# stress vowel not found!
+[VOW] #liberty# stress vowel not found!
+[VOW] #light# stress vowel not found!
+[VOW] #lindbergh# stress vowel not found!
+[VOW] #lindolf# stress vowel not found!
+[VOW] #ling# stress vowel not found!
+[VOW] #link# stress vowel not found!
+[VOW] #links# stress vowel not found!
+[VOW] #list# stress vowel not found!
+[VOW] #liszt# stress vowel not found!
+[VOW] #lloyd# stress vowel not found!
+[VOW] #locally# stress vowel not found!
+[VOW] #lord# stress vowel not found!
+[VOW] #lsd# stress vowel not found!
+[VOW] #lucky# stress vowel not found!
+[VOW] #lucy# stress vowel not found!
+[VOW] #ly# stress vowel not found!
+[VOW] #lycra# stress vowel not found!
+[VOW] #m# stress vowel not found!
+[VOW] #maguary# stress vowel not found!
+[VOW] #mansfield# stress vowel not found!
+[VOW] #mapping# stress vowel not found!
+[VOW] #maps# stress vowel not found!
+[VOW] #marc# stress vowel not found!
+[VOW] #marchand# stress vowel not found!
+[VOW] #marcy# stress vowel not found!
+[VOW] #margens# stress vowel not found!
+[VOW] #mark# stress vowel not found!
+[VOW] #mary# stress vowel not found!
+[VOW] #masp# stress vowel not found!
+[VOW] #massachusetts# stress vowel not found!
+[VOW] #massachussetts# stress vowel not found!
+[VOW] #mastercard# stress vowel not found!
+[VOW] #mccarthy# stress vowel not found!
+[VOW] #mcdonalds# stress vowel not found!
+[VOW] #melh# stress vowel not found!
+[VOW] #mens# stress vowel not found!
+[VOW] #mesm# stress vowel not found!
+[VOW] #meys# stress vowel not found!
+[VOW] #midnight# stress vowel not found!
+[VOW] #milk# stress vowel not found!
+[VOW] #mind# stress vowel not found!
+[VOW] #mindfulness# stress vowel not found!
+[VOW] #minecraft# stress vowel not found!
+[VOW] #minh# stress vowel not found!
+[VOW] #miptv# stress vowel not found!
+[VOW] #mirrors# stress vowel not found!
+[VOW] #miss# stress vowel not found!
+[VOW] #moff# stress vowel not found!
+[VOW] #most# stress vowel not found!
+[VOW] #motocross# stress vowel not found!
+[VOW] #mpb# stress vowel not found!
+[VOW] #mtv# stress vowel not found!
+[VOW] #much# stress vowel not found!
+[VOW] #mulh# stress vowel not found!
+[VOW] #mumford# stress vowel not found!
+[VOW] #munch# stress vowel not found!
+[VOW] #murch# stress vowel not found!
+[VOW] #murphy# stress vowel not found!
+[VOW] #musk# stress vowel not found!
+[VOW] #must# stress vowel not found!
+[VOW] #mustang# stress vowel not found!
+[VOW] #mw# stress vowel not found!
+[VOW] #mx3d# stress vowel not found!
+[G2P] Error while processing word 'mx3d', skipping char '3'. There may be errors at phoneme output
+[VOW] #my# stress vowel not found!
+[VOW] #n# stress vowel not found!
+[VOW] #nads# stress vowel not found!
+[VOW] #neds# stress vowel not found!
+[VOW] #nels# stress vowel not found!
+[VOW] #nerd# stress vowel not found!
+[VOW] #nerds# stress vowel not found!
+[VOW] #nery# stress vowel not found!
+[VOW] #ness# stress vowel not found!
+[VOW] #netiworking# stress vowel not found!
+[VOW] #network# stress vowel not found!
+[VOW] #networking# stress vowel not found!
+[VOW] #news# stress vowel not found!
+[VOW] #next# stress vowel not found!
+[VOW] #nick# stress vowel not found!
+[VOW] #niels# stress vowel not found!
+[VOW] #nietzsche# stress vowel not found!
+[VOW] #night# stress vowel not found!
+[VOW] #nijinsky# stress vowel not found!
+[VOW] #nm# stress vowel not found!
+[VOW] #nnca# stress vowel not found!
+[VOW] #noss# stress vowel not found!
+[VOW] #nps# stress vowel not found!
+[VOW] #nts# stress vowel not found!
+[VOW] #nurc# stress vowel not found!
+[VOW] #nuremberg# stress vowel not found!
+[VOW] #nutt# stress vowel not found!
+[VOW] #n?# stress vowel not found!
+[G2P] Error while processing word 'n?', skipping char '?'. There may be errors at phoneme output
+[VOW] #obs# stress vowel not found!
+[VOW] #occupy# stress vowel not found!
+[VOW] #ocm# stress vowel not found!
+[VOW] #ods# stress vowel not found!
+[VOW] #off# stress vowel not found!
+[VOW] #ofs# stress vowel not found!
+[VOW] #oktoberfest# stress vowel not found!
+[VOW] #ong# stress vowel not found!
+[VOW] #ongs# stress vowel not found!
+[VOW] #ont# stress vowel not found!
+[VOW] #oops# stress vowel not found!
+[VOW] #ops# stress vowel not found!
+[VOW] #ordens# stress vowel not found!
+[VOW] #org# stress vowel not found!
+[VOW] #orleans# stress vowel not found!
+[VOW] #oscars# stress vowel not found!
+[VOW] #ospb# stress vowel not found!
+[VOW] #oswald# stress vowel not found!
+[VOW] #oxford# stress vowel not found!
+[VOW] #p# stress vowel not found!
+[VOW] #pach# stress vowel not found!
+[VOW] #pallets# stress vowel not found!
+[VOW] #park# stress vowel not found!
+[VOW] #patty# stress vowel not found!
+[VOW] #paty# stress vowel not found!
+[VOW] #pc# stress vowel not found!
+[VOW] #pds# stress vowel not found!
+[VOW] #penetrans# stress vowel not found!
+[VOW] #perc# stress vowel not found!
+[VOW] #perch# stress vowel not found!
+[VOW] #perg# stress vowel not found!
+[VOW] #perhaps# stress vowel not found!
+[VOW] #perm# stress vowel not found!
+[VOW] #pers# stress vowel not found!
+[VOW] #pets# stress vowel not found!
+[VOW] #pf# stress vowel not found!
+[VOW] #pff# stress vowel not found!
+[VOW] #ph# stress vowel not found!
+[VOW] #phd# stress vowel not found!
+[VOW] #php# stress vowel not found!
+[VOW] #piangers# stress vowel not found!
+[VOW] #piccadilly# stress vowel not found!
+[VOW] #pick# stress vowel not found!
+[VOW] #piercing# stress vowel not found!
+[VOW] #ping# stress vowel not found!
+[VOW] #pink# stress vowel not found!
+[VOW] #pinky# stress vowel not found!
+[VOW] #pitt# stress vowel not found!
+[VOW] #plangg# stress vowel not found!
+[VOW] #plants# stress vowel not found!
+[VOW] #playback# stress vowel not found!
+[VOW] #ploct# stress vowel not found!
+[VOW] #pm# stress vowel not found!
+[VOW] #podcast# stress vowel not found!
+[VOW] #pong# stress vowel not found!
+[VOW] #porc# stress vowel not found!
+[VOW] #porq# stress vowel not found!
+[VOW] #port# stress vowel not found!
+[VOW] #post# stress vowel not found!
+[VOW] #posts# stress vowel not found!
+[VOW] #pott# stress vowel not found!
+[VOW] #pratt# stress vowel not found!
+[VOW] #prensky# stress vowel not found!
+[VOW] #presb# stress vowel not found!
+[VOW] #print# stress vowel not found!
+[VOW] #prs# stress vowel not found!
+[VOW] #puck# stress vowel not found!
+[VOW] #punch# stress vowel not found!
+[VOW] #punk# stress vowel not found!
+[VOW] #punks# stress vowel not found!
+[VOW] #push# stress vowel not found!
+[VOW] #puts# stress vowel not found!
+[G2P] Error while processing word 'p?que', skipping char '?'. There may be errors at phoneme output
+[VOW] #q# stress vowel not found!
+[VOW] #qq# stress vowel not found!
+[VOW] #qualq# stress vowel not found!
+[VOW] #quand# stress vowel not found!
+[VOW] #queens# stress vowel not found!
+[VOW] #queensland# stress vowel not found!
+[VOW] #quick# stress vowel not found!
+[VOW] #quilowatts# stress vowel not found!
+[VOW] #quint# stress vowel not found!
+[VOW] #r# stress vowel not found!
+[VOW] #rack# stress vowel not found!
+[VOW] #rafting# stress vowel not found!
+[VOW] #rally# stress vowel not found!
+[VOW] #ralph# stress vowel not found!
+[VOW] #randy# stress vowel not found!
+[VOW] #ranking# stress vowel not found!
+[VOW] #rdb# stress vowel not found!
+[VOW] #realm# stress vowel not found!
+[VOW] #records# stress vowel not found!
+[VOW] #rent# stress vowel not found!
+[VOW] #resp# stress vowel not found!
+[VOW] #restart# stress vowel not found!
+[VOW] #reymond# stress vowel not found!
+[VOW] #rh# stress vowel not found!
+[VOW] #rich# stress vowel not found!
+[VOW] #richard# stress vowel not found!
+[VOW] #riff# stress vowel not found!
+[VOW] #ring# stress vowel not found!
+[VOW] #rips# stress vowel not found!
+[VOW] #rock# stress vowel not found!
+[VOW] #rockstars# stress vowel not found!
+[VOW] #rosenberg# stress vowel not found!
+[VOW] #rpc# stress vowel not found!
+[VOW] #rudnick# stress vowel not found!
+[VOW] #rush# stress vowel not found!
+[VOW] #ruth# stress vowel not found!
+[VOW] #s# stress vowel not found!
+[VOW] #salt# stress vowel not found!
+[VOW] #samsung# stress vowel not found!
+[VOW] #sandy# stress vowel not found!
+[VOW] #sapiens# stress vowel not found!
+[VOW] #schally# stress vowel not found!
+[VOW] #schmidt# stress vowel not found!
+[VOW] #schmitt# stress vowel not found!
+[VOW] #scne# stress vowel not found!
+[VOW] #scooby# stress vowel not found!
+[VOW] #scott# stress vowel not found!
+[VOW] #scratch# stress vowel not found!
+[VOW] #script# stress vowel not found!
+[VOW] #sears# stress vowel not found!
+[VOW] #sedgwick# stress vowel not found!
+[VOW] #self# stress vowel not found!
+[VOW] #semp# stress vowel not found!
+[VOW] #sent# stress vowel not found!
+[VOW] #sertech# stress vowel not found!
+[VOW] #sesc# stress vowel not found!
+[VOW] #sescs# stress vowel not found!
+[VOW] #sesp# stress vowel not found!
+[VOW] #settings# stress vowel not found!
+[VOW] #sexy# stress vowel not found!
+[VOW] #sfp# stress vowel not found!
+[VOW] #sh# stress vowel not found!
+[VOW] #shark# stress vowel not found!
+[VOW] #sharp# stress vowel not found!
+[VOW] #shelf# stress vowel not found!
+[VOW] #sherlock# stress vowel not found!
+[VOW] #shift# stress vowel not found!
+[VOW] #shock# stress vowel not found!
+[VOW] #shoppers# stress vowel not found!
+[VOW] #shopping# stress vowel not found!
+[VOW] #shoppings# stress vowel not found!
+[VOW] #shops# stress vowel not found!
+[VOW] #short# stress vowel not found!
+[VOW] #shorts# stress vowel not found!
+[VOW] #shows# stress vowel not found!
+[VOW] #shrek# stress vowel not found!
+[VOW] #shrewsbury# stress vowel not found!
+[VOW] #sims# stress vowel not found!
+[VOW] #sind# stress vowel not found!
+[VOW] #skills# stress vowel not found!
+[VOW] #skils# stress vowel not found!
+[VOW] #sky# stress vowel not found!
+[VOW] #skype# stress vowel not found!
+[VOW] #sling# stress vowel not found!
+[VOW] #smart# stress vowel not found!
+[VOW] #smartwatch# stress vowel not found!
+[VOW] #smirnoff# stress vowel not found!
+[VOW] #smith# stress vowel not found!
+[VOW] #smiths# stress vowel not found!
+[VOW] #snoopy# stress vowel not found!
+[VOW] #snowboard# stress vowel not found!
+[VOW] #sochv# stress vowel not found!
+[VOW] #society# stress vowel not found!
+[VOW] #soft# stress vowel not found!
+[VOW] #sony# stress vowel not found!
+[VOW] #sorry# stress vowel not found!
+[VOW] #spielberg# stress vowel not found!
+[VOW] #sport# stress vowel not found!
+[VOW] #sports# stress vowel not found!
+[VOW] #spray# stress vowel not found!
+[VOW] #squash# stress vowel not found!
+[VOW] #stand# stress vowel not found!
+[VOW] #standard# stress vowel not found!
+[VOW] #stanford# stress vowel not found!
+[VOW] #start# stress vowel not found!
+[VOW] #startaps# stress vowel not found!
+[VOW] #starts# stress vowel not found!
+[VOW] #startups# stress vowel not found!
+[VOW] #stellfeld# stress vowel not found!
+[VOW] #stent# stress vowel not found!
+[VOW] #sth# stress vowel not found!
+[VOW] #sting# stress vowel not found!
+[VOW] #stirling# stress vowel not found!
+[VOW] #story# stress vowel not found!
+[VOW] #storytelling# stress vowel not found!
+[VOW] #stradford# stress vowel not found!
+[VOW] #strass# stress vowel not found!
+[VOW] #stress# stress vowel not found!
+[VOW] #style# stress vowel not found!
+[VOW] #subd# stress vowel not found!
+[VOW] #subs# stress vowel not found!
+[VOW] #sudbury# stress vowel not found!
+[VOW] #supermerc# stress vowel not found!
+[VOW] #surf# stress vowel not found!
+[VOW] #surfing# stress vowel not found!
+[VOW] #swift# stress vowel not found!
+[VOW] #sydney# stress vowel not found!
+[VOW] #t# stress vowel not found!
+[VOW] #tablets# stress vowel not found!
+[VOW] #talk# stress vowel not found!
+[VOW] #talks# stress vowel not found!
+[VOW] #tals# stress vowel not found!
+[VOW] #tamb# stress vowel not found!
+[VOW] #tank# stress vowel not found!
+[VOW] #tarc# stress vowel not found!
+[VOW] #tbc# stress vowel not found!
+[VOW] #tcc# stress vowel not found!
+[VOW] #tch# stress vowel not found!
+[VOW] #teach# stress vowel not found!
+[VOW] #tech# stress vowel not found!
+[VOW] #telecatch# stress vowel not found!
+[VOW] #telp# stress vowel not found!
+[VOW] #tenh# stress vowel not found!
+[VOW] #tens# stress vowel not found!
+[VOW] #tesch# stress vowel not found!
+[VOW] #test# stress vowel not found!
+[VOW] #text# stress vowel not found!
+[VOW] #thc# stress vowel not found!
+[VOW] #think# stress vowel not found!
+[VOW] #thinking# stress vowel not found!
+[VOW] #thunberg# stress vowel not found!
+[VOW] #tickets# stress vowel not found!
+[VOW] #tics# stress vowel not found!
+[VOW] #tirc# stress vowel not found!
+[VOW] #toddynho# stress vowel not found!
+[VOW] #tony# stress vowel not found!
+[VOW] #topless# stress vowel not found!
+[VOW] #tops# stress vowel not found!
+[VOW] #track# stress vowel not found!
+[VOW] #trackings# stress vowel not found!
+[VOW] #tramways# stress vowel not found!
+[VOW] #trans# stress vowel not found!
+[VOW] #transmitters# stress vowel not found!
+[VOW] #trench# stress vowel not found!
+[VOW] #trens# stress vowel not found!
+[VOW] #trh# stress vowel not found!
+[VOW] #trobriand# stress vowel not found!
+[VOW] #trombert# stress vowel not found!
+[VOW] #truck# stress vowel not found!
+[VOW] #trump# stress vowel not found!
+[VOW] #ts# stress vowel not found!
+[VOW] #tsc# stress vowel not found!
+[VOW] #tsh# stress vowel not found!
+[VOW] #tuts# stress vowel not found!
+[VOW] #tv# stress vowel not found!
+[VOW] #tvs# stress vowel not found!
+[VOW] #tweets# stress vowel not found!
+[VOW] #txt# stress vowel not found!
+[VOW] #u# stress vowel not found!
+[VOW] #uenf# stress vowel not found!
+[VOW] #ufmt# stress vowel not found!
+[VOW] #uhf# stress vowel not found!
+[VOW] #umh# stress vowel not found!
+[VOW] #ummm# stress vowel not found!
+[VOW] #unb# stress vowel not found!
+[VOW] #understand# stress vowel not found!
+[VOW] #ups# stress vowel not found!
+[VOW] #urb# stress vowel not found!
+[VOW] #usp# stress vowel not found!
+[VOW] #v# stress vowel not found!
+[VOW] #vans# stress vowel not found!
+[VOW] #varg# stress vowel not found!
+[VOW] #vasp# stress vowel not found!
+[VOW] #vc# stress vowel not found!
+[VOW] #verd# stress vowel not found!
+[VOW] #vest# stress vowel not found!
+[VOW] #vick# stress vowel not found!
+[VOW] #videoclips# stress vowel not found!
+[VOW] #views# stress vowel not found!
+[VOW] #virgens# stress vowel not found!
+[VOW] #vish# stress vowel not found!
+[VOW] #volks# stress vowel not found!
+[VOW] #wakeboard# stress vowel not found!
+[VOW] #waldick# stress vowel not found!
+[VOW] #waldorf# stress vowel not found!
+[VOW] #walk# stress vowel not found!
+[VOW] #walking# stress vowel not found!
+[VOW] #walt# stress vowel not found!
+[VOW] #wandenkolk# stress vowel not found!
+[VOW] #warcraft# stress vowel not found!
+[VOW] #wars# stress vowel not found!
+[VOW] #watch# stress vowel not found!
+[VOW] #watts# stress vowel not found!
+[VOW] #webb# stress vowel not found!
+[VOW] #werneck# stress vowel not found!
+[VOW] #west# stress vowel not found!
+[VOW] #whats# stress vowel not found!
+[VOW] #whatsapp# stress vowel not found!
+[VOW] #whisky# stress vowel not found!
+[VOW] #wild# stress vowel not found!
+[VOW] #wilkers# stress vowel not found!
+[VOW] #willys# stress vowel not found!
+[VOW] #winpitch# stress vowel not found!
+[VOW] #wisky# stress vowel not found!
+[VOW] #wolf# stress vowel not found!
+[VOW] #wolks# stress vowel not found!
+[VOW] #wolp# stress vowel not found!
+[VOW] #woodstock# stress vowel not found!
+[VOW] #woody# stress vowel not found!
+[VOW] #woolf# stress vowel not found!
+[VOW] #working# stress vowel not found!
+[VOW] #workshop# stress vowel not found!
+[VOW] #workshops# stress vowel not found!
+[VOW] #world# stress vowel not found!
+[VOW] #wright# stress vowel not found!
+[VOW] #x# stress vowel not found!
+[VOW] #xing# stress vowel not found!
+[VOW] #xp# stress vowel not found!
+[VOW] #y# stress vowel not found!
+[VOW] #yang# stress vowel not found!
+[VOW] #yeats# stress vowel not found!
+[VOW] #yevgeny# stress vowel not found!
+[VOW] #york# stress vowel not found!
+[VOW] #yptm# stress vowel not found!
+[VOW] #yuans# stress vowel not found!
+[VOW] #yung# stress vowel not found!
+[VOW] #yyy# stress vowel not found!
+[VOW] #z# stress vowel not found!
+[VOW] #zigs# stress vowel not found!
+[VOW] #zuckerberg# stress vowel not found!
+[VOW] #zygmunt# stress vowel not found!
+Arquivo data/local/dict/lexicon-oov.tmp salvo.
+--- Prepare phone lists ...
+--- Adding <unk> to the lexicon ...
+*** Dictionary preparation finished!
+utils/prepare_lang.sh data/local/dict <unk> data/local/lang data/lang
+Checking data/local/dict/silence_phones.txt ...
+--> reading data/local/dict/silence_phones.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/silence_phones.txt is OK
+
+Checking data/local/dict/optional_silence.txt ...
+--> reading data/local/dict/optional_silence.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/optional_silence.txt is OK
+
+Checking data/local/dict/nonsilence_phones.txt ...
+--> reading data/local/dict/nonsilence_phones.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/nonsilence_phones.txt is OK
+
+Checking disjoint: silence_phones.txt, nonsilence_phones.txt
+--> disjoint property is OK.
+
+Checking data/local/dict/lexicon.txt
+--> reading data/local/dict/lexicon.txt
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/local/dict/lexicon.txt is OK
+
+Checking data/local/dict/extra_questions.txt ...
+--> data/local/dict/extra_questions.txt is empty (this is OK)
+--> SUCCESS [validating dictionary directory data/local/dict]
+
+**Creating data/local/dict/lexiconp.txt from data/local/dict/lexicon.txt
+fstaddselfloops data/lang/phones/wdisambig_phones.int data/lang/phones/wdisambig_words.int 
+prepare_lang.sh: validating output directory
+utils/validate_lang.pl data/lang
+Checking existence of separator file
+separator file data/lang/subword_separator.txt is empty or does not exist, deal in word case.
+Checking data/lang/phones.txt ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang/phones.txt is OK
+
+Checking words.txt: #0 ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang/words.txt is OK
+
+Checking disjoint: silence.txt, nonsilence.txt, disambig.txt ...
+--> silence.txt and nonsilence.txt are disjoint
+--> silence.txt and disambig.txt are disjoint
+--> disambig.txt and nonsilence.txt are disjoint
+--> disjoint property is OK
+
+Checking sumation: silence.txt, nonsilence.txt, disambig.txt ...
+--> found no unexplainable phones in phones.txt
+
+Checking data/lang/phones/context_indep.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 5 entry/entries in data/lang/phones/context_indep.txt
+--> data/lang/phones/context_indep.int corresponds to data/lang/phones/context_indep.txt
+--> data/lang/phones/context_indep.csl corresponds to data/lang/phones/context_indep.txt
+--> data/lang/phones/context_indep.{txt, int, csl} are OK
+
+Checking data/lang/phones/nonsilence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 152 entry/entries in data/lang/phones/nonsilence.txt
+--> data/lang/phones/nonsilence.int corresponds to data/lang/phones/nonsilence.txt
+--> data/lang/phones/nonsilence.csl corresponds to data/lang/phones/nonsilence.txt
+--> data/lang/phones/nonsilence.{txt, int, csl} are OK
+
+Checking data/lang/phones/silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 5 entry/entries in data/lang/phones/silence.txt
+--> data/lang/phones/silence.int corresponds to data/lang/phones/silence.txt
+--> data/lang/phones/silence.csl corresponds to data/lang/phones/silence.txt
+--> data/lang/phones/silence.{txt, int, csl} are OK
+
+Checking data/lang/phones/optional_silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.int corresponds to data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.csl corresponds to data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.{txt, int, csl} are OK
+
+Checking data/lang/phones/disambig.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 11 entry/entries in data/lang/phones/disambig.txt
+--> data/lang/phones/disambig.int corresponds to data/lang/phones/disambig.txt
+--> data/lang/phones/disambig.csl corresponds to data/lang/phones/disambig.txt
+--> data/lang/phones/disambig.{txt, int, csl} are OK
+
+Checking data/lang/phones/roots.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 39 entry/entries in data/lang/phones/roots.txt
+--> data/lang/phones/roots.int corresponds to data/lang/phones/roots.txt
+--> data/lang/phones/roots.{txt, int} are OK
+
+Checking data/lang/phones/sets.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 39 entry/entries in data/lang/phones/sets.txt
+--> data/lang/phones/sets.int corresponds to data/lang/phones/sets.txt
+--> data/lang/phones/sets.{txt, int} are OK
+
+Checking data/lang/phones/extra_questions.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 9 entry/entries in data/lang/phones/extra_questions.txt
+--> data/lang/phones/extra_questions.int corresponds to data/lang/phones/extra_questions.txt
+--> data/lang/phones/extra_questions.{txt, int} are OK
+
+Checking data/lang/phones/word_boundary.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 157 entry/entries in data/lang/phones/word_boundary.txt
+--> data/lang/phones/word_boundary.int corresponds to data/lang/phones/word_boundary.txt
+--> data/lang/phones/word_boundary.{txt, int} are OK
+
+Checking optional_silence.txt ...
+--> reading data/lang/phones/optional_silence.txt
+--> data/lang/phones/optional_silence.txt is OK
+
+Checking disambiguation symbols: #0 and #1
+--> data/lang/phones/disambig.txt has "#0" and "#1"
+--> data/lang/phones/disambig.txt is OK
+
+Checking topo ...
+
+Checking word_boundary.txt: silence.txt, nonsilence.txt, disambig.txt ...
+--> data/lang/phones/word_boundary.txt doesn't include disambiguation symbols
+--> data/lang/phones/word_boundary.txt is the union of nonsilence.txt and silence.txt
+--> data/lang/phones/word_boundary.txt is OK
+
+Checking word-level disambiguation symbols...
+--> data/lang/phones/wdisambig.txt exists (newer prepare_lang.sh)
+Checking word_boundary.int and disambig.int
+--> generating a 33 word/subword sequence
+--> resulting phone sequence from L.fst corresponds to the word sequence
+--> L.fst is OK
+--> generating a 8 word/subword sequence
+--> resulting phone sequence from L_disambig.fst corresponds to the word sequence
+--> L_disambig.fst is OK
+
+Checking data/lang/oov.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang/oov.txt
+--> data/lang/oov.int corresponds to data/lang/oov.txt
+--> data/lang/oov.{txt, int} are OK
+
+--> data/lang/L.fst is olabel sorted
+--> data/lang/L_disambig.fst is olabel sorted
+--> SUCCESS [validating lang directory data/lang]
+Converting '/models/lm_vaudimus_small.arpa.gz' to FST
+arpa2fst --disambig-symbol=#0 --read-symbol-table=data/lang_test//words.txt - data/lang_test//G.fst 
+LOG (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:94) Reading \data\ section.
+LOG (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:149) Reading \1-grams: section.
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 9 [-2.401013	<UNK>	-0.2496208] skipped: word '<UNK>' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 12 [-7.399933	a-ha] skipped: word 'a-ha' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 13 [-7.399933	a-mar] skipped: word 'a-mar' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 14 [-7.399933	a-tarefa] skipped: word 'a-tarefa' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 15 [-6.803844	aaaa] skipped: word 'aaaa' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 16 [-6.39688	aaas] skipped: word 'aaas' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 17 [-6.459945	aab] skipped: word 'aab' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 18 [-6.092883	aac	-0.09103809] skipped: word 'aac' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 19 [-6.734732	aaccmt] skipped: word 'aaccmt' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 20 [-7.399933	aacd-servidor] skipped: word 'aacd-servidor' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 21 [-6.734732	aachen] skipped: word 'aachen' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 22 [-6.622716	aad] skipped: word 'aad' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 23 [-6.803844	aadc] skipped: word 'aadc' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 24 [-6.533749	aades] skipped: word 'aades' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 25 [-6.123057	aadhaar	-0.06377577] skipped: word 'aadhaar' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 26 [-6.341822	aae	-0.05875155] skipped: word 'aae' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 27 [-6.803844	aaf] skipped: word 'aaf' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 28 [-6.123057	aai	-0.02931039] skipped: word 'aai' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 29 [-6.675123	aaib	-0.05429254] skipped: word 'aaib' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 30 [-6.190533	aal	-0.0299126] skipped: word 'aal' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 31 [-6.675123	aalborg	-0.1873538] skipped: word 'aalborg' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 32 [-7.165326	aalst] skipped: word 'aalst' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 33 [-6.803844	aalto] skipped: word 'aalto' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 34 [-6.155486	aam	-0.01514496] skipped: word 'aam' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 35 [-6.533749	aama] skipped: word 'aama' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 36 [-7.399933	aamer] skipped: word 'aamer' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 37 [-7.399933	aamir] skipped: word 'aamir' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 38 [-5.783174	aan	-0.5801613] skipped: word 'aan' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 39 [-6.368479	aao] skipped: word 'aao' not in symbol table
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:219) line 40 [-5.925611	aap	-0.106789] skipped: word 'aap' not in symbol table
+LOG (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:149) Reading \2-grams: section.
+LOG (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:149) Reading \3-grams: section.
+WARNING (arpa2fst[5.5.0~1547-6e63]:Read():arpa-file-parser.cc:259) Of 1407769 parse warnings, 30 were reported. Run program with --max-arpa-warnings=-1 to see all warnings
+LOG (arpa2fst[5.5.0~1547-6e63]:RemoveRedundantStates():arpa-lm-compiler.cc:359) Reduced num-states from 1772733 to 509331
+fstisstochastic data/lang_test//G.fst 
+3.74305 -0.367331
+Succeeded in formatting LM: '/models/lm_vaudimus_small.arpa.gz'
+steps/make_mfcc.sh --cmd run.pl --mem 210G --nj 92 data/valid_train exp/make_mfcc/valid_train mfcc
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for valid_train
+steps/compute_cmvn_stats.sh data/valid_train exp/make_mfcc/valid_train mfcc
+Succeeded creating CMVN stats for valid_train
+steps/make_mfcc.sh --cmd run.pl --mem 210G --nj 92 data/valid_test exp/make_mfcc/valid_test mfcc
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_test
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for valid_test
+steps/compute_cmvn_stats.sh data/valid_test exp/make_mfcc/valid_test mfcc
+Succeeded creating CMVN stats for valid_test
+steps/train_mono.sh --boost-silence 1.25 --nj 92 --cmd run.pl --mem 210G data/valid_train data/lang exp/mono
+steps/train_mono.sh: Initializing monophone system.
+steps/train_mono.sh: Compiling training graphs
+steps/train_mono.sh: Aligning data equally (pass 0)
+steps/train_mono.sh: Pass 1
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 2
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 3
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 4
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 5
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 6
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 7
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 8
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 9
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 10
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 11
+steps/train_mono.sh: Pass 12
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 13
+steps/train_mono.sh: Pass 14
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 15
+steps/train_mono.sh: Pass 16
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 17
+steps/train_mono.sh: Pass 18
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 19
+steps/train_mono.sh: Pass 20
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 21
+steps/train_mono.sh: Pass 22
+steps/train_mono.sh: Pass 23
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 24
+steps/train_mono.sh: Pass 25
+steps/train_mono.sh: Pass 26
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 27
+steps/train_mono.sh: Pass 28
+steps/train_mono.sh: Pass 29
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 30
+steps/train_mono.sh: Pass 31
+steps/train_mono.sh: Pass 32
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 33
+steps/train_mono.sh: Pass 34
+steps/train_mono.sh: Pass 35
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 36
+steps/train_mono.sh: Pass 37
+steps/train_mono.sh: Pass 38
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 39
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/mono
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 46.404399101754095% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 41.432184883191155% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/mono/log/analyze_alignments.log
+2 warnings in exp/mono/log/analyze_alignments.log
+126760 warnings in exp/mono/log/acc.*.*.log
+1472074 warnings in exp/mono/log/align.*.*.log
+exp/mono: nj=92 align prob=-102.42 over 271.04h [retry=5.7%, fail=0.0%] states=119 gauss=994
+steps/train_mono.sh: Done training monophone system in exp/mono
+steps/align_si.sh --boost-silence 1.25 --nj 92 --cmd run.pl --mem 210G data/valid_train data/lang exp/mono exp/mono_ali_train
+tree-info exp/mono/tree 
+tree-info exp/mono/tree 
+fstpushspecial 
+fstminimizeencoded 
+fstdeterminizestar --use-log=true 
+fsttablecompose data/lang_test/L_disambig.fst data/lang_test/G.fst 
+steps/align_si.sh: feature type is delta
+steps/align_si.sh: aligning data in data/valid_train using model from exp/mono, putting alignments in exp/mono_ali_train
+fstisstochastic data/lang_test/tmp/LG.fst 
+0.00929834 0.008409
+fstcomposecontext --context-size=1 --central-position=0 --read-disambig-syms=data/lang_test/phones/disambig.int --write-disambig-syms=data/lang_test/tmp/disambig_ilabels_1_0.int data/lang_test/tmp/ilabels_1_0.71338 data/lang_test/tmp/LG.fst 
+fstisstochastic data/lang_test/tmp/CLG_1_0.fst 
+0.00929834 0.008409
+make-h-transducer --disambig-syms-out=exp/mono/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_1_0 exp/mono/tree exp/mono/final.mdl 
+fsttablecompose exp/mono/graph/Ha.fst data/lang_test/tmp/CLG_1_0.fst 
+fstdeterminizestar --use-log=true 
+fstminimizeencoded 
+fstrmsymbols exp/mono/graph/disambig_tid.int 
+fstrmepslocal 
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/mono_ali_train
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 46.20500311451468% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 41.363861314843376% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/mono_ali_train/log/analyze_alignments.log
+steps/align_si.sh: done aligning data.
+steps/train_deltas.sh --boost-silence 1.25 --cmd run.pl --mem 210G 2000 10000 data/valid_train data/lang exp/mono_ali_train exp/tri1
+steps/train_deltas.sh: accumulating tree stats
+steps/train_deltas.sh: getting questions for tree-building, via clustering
+steps/train_deltas.sh: building the tree
+steps/train_deltas.sh: converting alignments from exp/mono_ali_train to use current tree
+steps/train_deltas.sh: compiling graphs of transcripts
+steps/train_deltas.sh: training pass 1
+steps/train_deltas.sh: training pass 2
+steps/train_deltas.sh: training pass 3
+steps/train_deltas.sh: training pass 4
+steps/train_deltas.sh: training pass 5
+steps/train_deltas.sh: training pass 6
+steps/train_deltas.sh: training pass 7
+steps/train_deltas.sh: training pass 8
+steps/train_deltas.sh: training pass 9
+steps/train_deltas.sh: training pass 10
+steps/train_deltas.sh: aligning data
+fstisstochastic exp/mono/graph/HCLGa.fst 
+0.0189578 -0.000469647
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/mono/final.mdl exp/mono/graph/HCLGa.fst 
+steps/decode.sh --nj 92 --cmd run.pl --mem 210G exp/mono/graph data/valid_test exp/mono/decode_valid_test
+decode.sh: feature type is delta
+steps/train_deltas.sh: training pass 11
+steps/train_deltas.sh: training pass 12
+steps/train_deltas.sh: training pass 13
+steps/train_deltas.sh: training pass 14
+steps/train_deltas.sh: training pass 15
+steps/train_deltas.sh: training pass 16
+steps/train_deltas.sh: training pass 17
+steps/train_deltas.sh: training pass 18
+steps/train_deltas.sh: training pass 19
+steps/train_deltas.sh: training pass 20
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 21
+steps/train_deltas.sh: training pass 22
+steps/train_deltas.sh: training pass 23
+steps/train_deltas.sh: training pass 24
+steps/train_deltas.sh: training pass 25
+steps/train_deltas.sh: training pass 26
+steps/train_deltas.sh: training pass 27
+steps/train_deltas.sh: training pass 28
+steps/train_deltas.sh: training pass 29
+steps/train_deltas.sh: training pass 30
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 31
+steps/train_deltas.sh: training pass 32
+steps/train_deltas.sh: training pass 33
+steps/train_deltas.sh: training pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri1
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 37.88122074459029% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 39.537895310796074% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri1/log/analyze_alignments.log
+75805 warnings in exp/tri1/log/align.*.*.log
+1 warnings in exp/tri1/log/build_tree.log
+2 warnings in exp/tri1/log/analyze_alignments.log
+16099 warnings in exp/tri1/log/acc.*.*.log
+exp/tri1: nj=92 align prob=-101.51 over 270.67h [retry=5.8%, fail=0.1%] states=1632 gauss=10038 tree-impr=3.08
+steps/train_deltas.sh: Done training system with delta+delta-delta features in exp/tri1
+steps/align_si.sh --nj 92 --cmd run.pl --mem 210G data/valid_train data/lang exp/tri1 exp/tri1_ali_train
+tree-info exp/tri1/tree 
+tree-info exp/tri1/tree 
+steps/align_si.sh: feature type is delta
+steps/align_si.sh: aligning data in data/valid_train using model from exp/tri1, putting alignments in exp/tri1_ali_train
+fstcomposecontext --context-size=3 --central-position=1 --read-disambig-syms=data/lang_test/phones/disambig.int --write-disambig-syms=data/lang_test/tmp/disambig_ilabels_3_1.int data/lang_test/tmp/ilabels_3_1.45347 data/lang_test/tmp/LG.fst 
+fstisstochastic data/lang_test/tmp/CLG_3_1.fst 
+0.00929834 0
+make-h-transducer --disambig-syms-out=exp/tri1/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri1/tree exp/tri1/final.mdl 
+fsttablecompose exp/tri1/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+fstrmsymbols exp/tri1/graph/disambig_tid.int 
+fstminimizeencoded 
+fstdeterminizestar --use-log=true 
+fstrmepslocal 
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri1_ali_train
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 36.00601339919437% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 38.9492972071784% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri1_ali_train/log/analyze_alignments.log
+steps/align_si.sh: done aligning data.
+steps/train_lda_mllt.sh --cmd run.pl --mem 210G --splice-opts --left-context=3 --right-context=3 2500 15000 data/valid_train data/lang exp/tri1_ali_train exp/tri2b
+steps/train_lda_mllt.sh: Accumulating LDA statistics.
+steps/train_lda_mllt.sh: Accumulating tree stats
+steps/train_lda_mllt.sh: Getting questions for tree clustering.
+steps/train_lda_mllt.sh: Building the tree
+steps/train_lda_mllt.sh: Initializing the model
+steps/train_lda_mllt.sh: Converting alignments from exp/tri1_ali_train to use current tree
+steps/train_lda_mllt.sh: Compiling graphs of transcripts
+Training pass 1
+Training pass 2
+steps/train_lda_mllt.sh: Estimating MLLT
+Training pass 3
+Training pass 4
+steps/train_lda_mllt.sh: Estimating MLLT
+Training pass 5
+Training pass 6
+steps/train_lda_mllt.sh: Estimating MLLT
+fstisstochastic exp/tri1/graph/HCLGa.fst 
+Training pass 7
+0.026526 -0.0004872
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri1/final.mdl exp/tri1/graph/HCLGa.fst 
+Training pass 8
+Training pass 9
+Training pass 10
+Aligning data
+steps/decode.sh --nj 92 --cmd run.pl --mem 210G exp/tri1/graph data/valid_test exp/tri1/decode_valid_test
+decode.sh: feature type is delta
+Training pass 11
+Training pass 12
+steps/train_lda_mllt.sh: Estimating MLLT
+Training pass 13
+Training pass 14
+Training pass 15
+Training pass 16
+Training pass 17
+Training pass 18
+Training pass 19
+Training pass 20
+Aligning data
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G exp/mono/graph exp/mono/decode_valid_test
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 58.388726402552514% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 51.11940298507463% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/mono/decode_valid_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(17,98,364) and mean=156.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/mono/decode_valid_test/log/analyze_lattice_depth_stats.log
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/mono/graph exp/mono/decode_valid_test
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+Training pass 21
+Training pass 22
+Training pass 23
+Training pass 24
+Training pass 25
+Training pass 26
+Training pass 27
+Training pass 28
+Training pass 29
+Training pass 30
+Aligning data
+Training pass 31
+Training pass 32
+Training pass 33
+Training pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri2b
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 35.012493201648944% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 38.64446742611437% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri2b/log/analyze_alignments.log
+48211 warnings in exp/tri2b/log/acc.*.*.log
+2 warnings in exp/tri2b/log/analyze_alignments.log
+444 warnings in exp/tri2b/log/lda_acc.*.log
+102363 warnings in exp/tri2b/log/align.*.*.log
+1 warnings in exp/tri2b/log/build_tree.log
+exp/tri2b: nj=92 align prob=-49.22 over 269.40h [retry=7.4%, fail=0.4%] states=2048 gauss=15041 tree-impr=3.08 lda-sum=7.56 mllt:impr,logdet=0.69,1.09
+steps/train_lda_mllt.sh: Done training system with LDA+MLLT features in exp/tri2b
+tree-info exp/tri2b/tree 
+tree-info exp/tri2b/tree 
+make-h-transducer --disambig-syms-out=exp/tri2b/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri2b/tree exp/tri2b/final.mdl 
+fstrmsymbols exp/tri2b/graph/disambig_tid.int 
+fstminimizeencoded 
+fstrmepslocal 
+fstdeterminizestar --use-log=true 
+fsttablecompose exp/tri2b/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G exp/tri1/graph exp/tri1/decode_valid_test
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 55.17149694230258% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 75.18306483823726% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode_valid_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(6,48,206) and mean=84.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode_valid_test/log/analyze_lattice_depth_stats.log
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/tri1/graph exp/tri1/decode_valid_test
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+fstisstochastic exp/tri2b/graph/HCLGa.fst 
+0.0268881 -0.0004872
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri2b/final.mdl exp/tri2b/graph/HCLGa.fst 
+steps/align_si.sh --nj 92 --cmd run.pl --mem 210G --use-graphs true data/valid_train data/lang exp/tri2b exp/tri2b_ali_train
+steps/decode.sh --nj 92 --cmd run.pl --mem 210G exp/tri2b/graph data/valid_test exp/tri2b/decode_valid_test
+decode.sh: feature type is lda
+steps/align_si.sh: feature type is lda
+steps/align_si.sh: aligning data in data/valid_train using model from exp/tri2b, putting alignments in exp/tri2b_ali_train
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri2b_ali_train
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 34.424067608712214% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 37.975433001247296% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri2b_ali_train/log/analyze_alignments.log
+steps/align_si.sh: done aligning data.
+steps/train_sat.sh --cmd run.pl --mem 210G 2500 15000 data/valid_train data/lang exp/tri2b_ali_train exp/tri3b
+steps/train_sat.sh: feature type is lda
+steps/train_sat.sh: obtaining initial fMLLR transforms since not present in exp/tri2b_ali_train
+steps/train_sat.sh: Accumulating tree stats
+steps/train_sat.sh: Getting questions for tree clustering.
+steps/train_sat.sh: Building the tree
+steps/train_sat.sh: Initializing the model
+steps/train_sat.sh: Converting alignments from exp/tri2b_ali_train to use current tree
+steps/train_sat.sh: Compiling graphs of transcripts
+Pass 1
+Pass 2
+Estimating fMLLR transforms
+Pass 3
+Pass 4
+Estimating fMLLR transforms
+Pass 5
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G exp/tri2b/graph exp/tri2b/decode_valid_test
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 55.50385535761765% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 74.49360341151386% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri2b/decode_valid_test/log/analyze_alignments.log
+Pass 6
+Estimating fMLLR transforms
+Overall, lattice depth (10,50,90-percentile)=(5,38,173) and mean=70.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri2b/decode_valid_test/log/analyze_lattice_depth_stats.log
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/tri2b/graph exp/tri2b/decode_valid_test
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+Pass 7
+Pass 8
+Pass 9
+Pass 10
+Aligning data
+Pass 11
+Pass 12
+Estimating fMLLR transforms
+Pass 13
+Pass 14
+Pass 15
+Pass 16
+Pass 17
+Pass 18
+Pass 19
+Pass 20
+Aligning data
+Pass 21
+Pass 22
+Pass 23
+Pass 24
+Pass 25
+Pass 26
+Pass 27
+Pass 28
+Pass 29
+Pass 30
+Aligning data
+Pass 31
+Pass 32
+Pass 33
+Pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri3b
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 34.5481816746487% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 38.10422990603432% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri3b/log/analyze_alignments.log
+2 warnings in exp/tri3b/log/analyze_alignments.log
+114922 warnings in exp/tri3b/log/align.*.*.log
+1801551 warnings in exp/tri3b/log/fmllr.*.*.log
+86433 warnings in exp/tri3b/log/acc.*.*.log
+1 warnings in exp/tri3b/log/build_tree.log
+steps/train_sat.sh: Likelihood evolution:
+-51.8795 -51.7493 -51.6696 -51.5586 -50.9108 -50.2975 -49.9411 -49.7149 -49.544 -49.0497 -48.9013 -48.6673 -48.5823 -48.5102 -48.4407 -48.3786 -48.3245 -48.276 -48.23 -48.0465 -47.9737 -47.9358 -47.9026 -47.8718 -47.8417 -47.8125 -47.7845 -47.7571 -47.7306 -47.6357 -47.5924 -47.5735 -47.5612 -47.5528 
+exp/tri3b: nj=92 align prob=-50.53 over 268.99h [retry=7.4%, fail=0.6%] states=2000 gauss=15024 fmllr-impr=1.91 over 221.37h tree-impr=4.37
+steps/train_sat.sh: done training SAT system in exp/tri3b
+steps/align_fmllr.sh --nj 92 --cmd run.pl --mem 210G data/valid_train data/lang exp/tri3b exp/tri3b_ali_train
+tree-info exp/tri3b/tree 
+tree-info exp/tri3b/tree 
+make-h-transducer --disambig-syms-out=exp/tri3b/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri3b/tree exp/tri3b/final.mdl 
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+fstrmepslocal 
+fstminimizeencoded 
+fsttablecompose exp/tri3b/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+fstrmsymbols exp/tri3b/graph/disambig_tid.int 
+fstdeterminizestar --use-log=true 
+steps/align_fmllr.sh: aligning data in data/valid_train using exp/tri3b/final.alimdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+fstisstochastic exp/tri3b/graph/HCLGa.fst 
+0.0267233 -0.0004872
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri3b/final.mdl exp/tri3b/graph/HCLGa.fst 
+steps/align_fmllr.sh: doing final alignment.
+steps/decode_fmllr.sh --nj 92 --cmd run.pl --mem 210G exp/tri3b/graph data/valid_test exp/tri3b/decode_valid_test
+steps/decode.sh --scoring-opts  --num-threads 1 --skip-scoring false --acwt 0.083333 --nj 92 --cmd run.pl --mem 210G --beam 10.0 --model exp/tri3b/final.alimdl --max-active 2000 exp/tri3b/graph data/valid_test exp/tri3b/decode_valid_test.si
+decode.sh: feature type is lda
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri3b_ali_train
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 34.16053172154582% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 37.89702365729743% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri3b_ali_train/log/analyze_alignments.log
+360152 warnings in exp/tri3b_ali_train/log/fmllr.*.log
+28872 warnings in exp/tri3b_ali_train/log/align_pass2.*.log
+2 warnings in exp/tri3b_ali_train/log/analyze_alignments.log
+29034 warnings in exp/tri3b_ali_train/log/align_pass1.*.log
+steps/train_sat.sh --cmd run.pl --mem 210G 4200 40000 data/valid_train data/lang exp/tri3b_ali_train exp/tri4b
+steps/train_sat.sh: feature type is lda
+steps/train_sat.sh: Using transforms from exp/tri3b_ali_train
+steps/train_sat.sh: Accumulating tree stats
+steps/train_sat.sh: Getting questions for tree clustering.
+steps/train_sat.sh: Building the tree
+steps/train_sat.sh: Initializing the model
+steps/train_sat.sh: Converting alignments from exp/tri3b_ali_train to use current tree
+steps/train_sat.sh: Compiling graphs of transcripts
+Pass 1
+Pass 2
+Estimating fMLLR transforms
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G exp/tri3b/graph exp/tri3b/decode_valid_test.si
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 55.463972347779844% of the time at utterance begin.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3b/decode_valid_test.si/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(3,19,76) and mean=31.8
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3b/decode_valid_test.si/log/analyze_lattice_depth_stats.log
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/tri3b/graph exp/tri3b/decode_valid_test.si
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+steps/decode_fmllr.sh: feature type is lda
+steps/decode_fmllr.sh: getting first-pass fMLLR transforms.
+steps/decode_fmllr.sh: doing main lattice generation phase
+Pass 3
+Pass 4
+Estimating fMLLR transforms
+Pass 5
+Pass 6
+Estimating fMLLR transforms
+Pass 7
+Pass 8
+Pass 9
+steps/decode_fmllr.sh: estimating fMLLR transforms a second time.
+Pass 10
+Aligning data
+steps/decode_fmllr.sh: doing a final pass of acoustic rescoring.
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G exp/tri3b/graph exp/tri3b/decode_valid_test
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 55.66338739696889% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 75.73294243070363% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3b/decode_valid_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,23,142) and mean=54.0
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri3b/decode_valid_test/log/analyze_lattice_depth_stats.log
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/tri3b/graph exp/tri3b/decode_valid_test
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+Pass 11
+Pass 12
+Estimating fMLLR transforms
+Pass 13
+Pass 14
+Pass 15
+Pass 16
+Pass 17
+Pass 18
+Pass 19
+Pass 20
+Aligning data
+Pass 21
+Pass 22
+Pass 23
+Pass 24
+Pass 25
+Pass 26
+Pass 27
+Pass 28
+Pass 29
+Pass 30
+Aligning data
+Pass 31
+Pass 32
+Pass 33
+Pass 34
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri4b
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 33.41548183254344% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 37.6633973983173% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri4b/log/analyze_alignments.log
+1441984 warnings in exp/tri4b/log/fmllr.*.*.log
+104201 warnings in exp/tri4b/log/acc.*.*.log
+1 warnings in exp/tri4b/log/build_tree.log
+2 warnings in exp/tri4b/log/analyze_alignments.log
+109218 warnings in exp/tri4b/log/align.*.*.log
+steps/train_sat.sh: Likelihood evolution:
+-51.4564 -51.2809 -51.2438 -51.1448 -50.5798 -49.864 -49.4111 -49.153 -48.9292 -48.4967 -48.3374 -48.1086 -48.0167 -47.948 -47.8829 -47.8172 -47.7554 -47.6987 -47.6456 -47.4653 -47.3907 -47.3506 -47.3169 -47.286 -47.2566 -47.2282 -47.2009 -47.1745 -47.149 -47.064 -47.0198 -46.9991 -46.9852 -46.9755 
+exp/tri4b: nj=92 align prob=-49.96 over 268.81h [retry=6.7%, fail=0.6%] states=3528 gauss=40058 fmllr-impr=0.59 over 222.08h tree-impr=4.66
+steps/train_sat.sh: done training SAT system in exp/tri4b
+tree-info exp/tri4b/tree 
+tree-info exp/tri4b/tree 
+make-h-transducer --disambig-syms-out=exp/tri4b/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_3_1 exp/tri4b/tree exp/tri4b/final.mdl 
+fstrmsymbols exp/tri4b/graph/disambig_tid.int 
+fstminimizeencoded 
+fstrmepslocal 
+fstdeterminizestar --use-log=true 
+fsttablecompose exp/tri4b/graph/Ha.fst data/lang_test/tmp/CLG_3_1.fst 
+fix_data_dir.sh: kept all 382258 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train/.backup
+fix_data_dir.sh: kept all 7522 utterances.
+fix_data_dir.sh: old files are kept in data/valid_test/.backup
+fstisstochastic exp/tri4b/graph/HCLGa.fst 
+0.0268591 -0.0004872
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=0.1 --reorder=true exp/tri4b/final.mdl exp/tri4b/graph/HCLGa.fst 
+steps/decode_fmllr.sh --nj 92 --cmd run.pl --mem 210G exp/tri4b/graph data/valid_test exp/tri4b/decode_valid_test
+steps/decode.sh --scoring-opts  --num-threads 1 --skip-scoring false --acwt 0.083333 --nj 92 --cmd run.pl --mem 210G --beam 10.0 --model exp/tri4b/final.alimdl --max-active 2000 exp/tri4b/graph data/valid_test exp/tri4b/decode_valid_test.si
+decode.sh: feature type is lda
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G exp/tri4b/graph exp/tri4b/decode_valid_test.si
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 54.41371975538421% of the time at utterance begin.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4b/decode_valid_test.si/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(3,16,69) and mean=28.3
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4b/decode_valid_test.si/log/analyze_lattice_depth_stats.log
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/tri4b/graph exp/tri4b/decode_valid_test.si
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+steps/decode_fmllr.sh: feature type is lda
+steps/decode_fmllr.sh: getting first-pass fMLLR transforms.
+steps/decode_fmllr.sh: doing main lattice generation phase
+steps/decode_fmllr.sh: estimating fMLLR transforms a second time.
+steps/decode_fmllr.sh: doing a final pass of acoustic rescoring.
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G exp/tri4b/graph exp/tri4b/decode_valid_test
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 54.147833023132144% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 74.8563794255177% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4b/decode_valid_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(2,20,131) and mean=48.9
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4b/decode_valid_test/log/analyze_lattice_depth_stats.log
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/tri4b/graph exp/tri4b/decode_valid_test
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0

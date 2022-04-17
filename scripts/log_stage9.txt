@@ -1,0 +1,345 @@
+local/chain/run_tdnn.sh --stage 0
+local/nnet3/run_ivector_common.sh: preparing directory for low-resolution speed-perturbed data (for alignment)
+fix_data_dir.sh: kept all 382258 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train/.backup
+utils/data/perturb_data_dir_speed_3way.sh: making sure the utt2dur and the reco2dur files are present
+... in data/valid_train, because obtaining it after speed-perturbing
+... would be very slow, and you might need them.
+utils/data/get_utt2dur.sh: data/valid_train/utt2dur already exists with the expected length.  We won't recompute it.
+utils/data/get_reco2dur.sh: data/valid_train/wav.scp indexed by utt-id; copying utt2dur to reco2dur
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/valid_train, in data/valid_train_sp_speed0.9
+fix_data_dir.sh: kept all 382258 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train_sp_speed0.9/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train_sp_speed0.9
+utils/data/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/valid_train, in data/valid_train_sp_speed1.1
+fix_data_dir.sh: kept all 382258 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train_sp_speed1.1/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train_sp_speed1.1
+utils/data/combine_data.sh data/valid_train_sp data/valid_train data/valid_train_sp_speed0.9 data/valid_train_sp_speed1.1
+utils/data/combine_data.sh: combined utt2uniq
+utils/data/combine_data.sh [info]: not combining segments as it does not exist
+utils/data/combine_data.sh: combined utt2spk
+utils/data/combine_data.sh [info]: not combining utt2lang as it does not exist
+utils/data/combine_data.sh: combined utt2dur
+utils/data/combine_data.sh [info]: **not combining utt2num_frames as it does not exist everywhere**
+utils/data/combine_data.sh: combined reco2dur
+utils/data/combine_data.sh [info]: **not combining feats.scp as it does not exist everywhere**
+utils/data/combine_data.sh: combined text
+utils/data/combine_data.sh [info]: **not combining cmvn.scp as it does not exist everywhere**
+utils/data/combine_data.sh [info]: not combining vad.scp as it does not exist
+utils/data/combine_data.sh [info]: not combining reco2file_and_channel as it does not exist
+utils/data/combine_data.sh: combined wav.scp
+utils/data/combine_data.sh [info]: not combining spk2gender as it does not exist
+fix_data_dir.sh: kept all 1146774 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train_sp/.backup
+utils/data/perturb_data_dir_speed_3way.sh: generated 3-way speed-perturbed version of data in data/valid_train, in data/valid_train_sp
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train_sp
+local/nnet3/run_ivector_common.sh: making MFCC features for low-resolution speed-perturbed data
+steps/make_mfcc.sh --cmd run.pl --mem 210G --nj 92 data/valid_train_sp
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train_sp
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for valid_train_sp
+steps/compute_cmvn_stats.sh data/valid_train_sp
+Succeeded creating CMVN stats for valid_train_sp
+fix_data_dir.sh: kept all 1146774 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train_sp/.backup
+local/nnet3/run_ivector_common.sh: aligning with the perturbed low-resolution data
+steps/align_fmllr.sh --nj 92 --cmd run.pl --mem 210G data/valid_train_sp data/lang exp/tri4b exp/tri4b_ali_valid_train_sp
+steps/align_fmllr.sh: feature type is lda
+steps/align_fmllr.sh: compiling training graphs
+steps/align_fmllr.sh: aligning data in data/valid_train_sp using exp/tri4b/final.alimdl and speaker-independent features.
+steps/align_fmllr.sh: computing fMLLR transforms
+steps/align_fmllr.sh: doing final alignment.
+steps/align_fmllr.sh: done aligning data.
+steps/diagnostic/analyze_alignments.sh --cmd run.pl --mem 210G data/lang exp/tri4b_ali_valid_train_sp
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 32.864510943576356% of the time at utterance begin.  This may not be optimal.
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 37.43864519075988% of the time at utterance end.  This may not be optimal.
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri4b_ali_valid_train_sp/log/analyze_alignments.log
+85601 warnings in exp/tri4b_ali_valid_train_sp/log/align_pass1.*.log
+1079122 warnings in exp/tri4b_ali_valid_train_sp/log/fmllr.*.log
+84970 warnings in exp/tri4b_ali_valid_train_sp/log/align_pass2.*.log
+2 warnings in exp/tri4b_ali_valid_train_sp/log/analyze_alignments.log
+local/nnet3/run_ivector_common.sh: creating high-resolution MFCC features
+utils/copy_data_dir.sh: copied data from data/valid_train_sp to data/valid_train_sp_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train_sp_hires
+utils/copy_data_dir.sh: copied data from data/valid_test to data/valid_test_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_test_hires
+utils/data/perturb_data_dir_volume.sh: data/valid_train_sp_hires/feats.scp exists; moving it to data/valid_train_sp_hires/.backup/ as it wouldn't be valid any more.
+utils/data/perturb_data_dir_volume.sh: added volume perturbation to the data in data/valid_train_sp_hires
+steps/make_mfcc.sh --nj 92 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 210G data/valid_train_sp_hires
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_train_sp_hires
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for valid_train_sp_hires
+steps/compute_cmvn_stats.sh data/valid_train_sp_hires
+Succeeded creating CMVN stats for valid_train_sp_hires
+fix_data_dir.sh: kept all 1146774 utterances.
+fix_data_dir.sh: old files are kept in data/valid_train_sp_hires/.backup
+steps/make_mfcc.sh --nj 92 --mfcc-config conf/mfcc_hires.conf --cmd run.pl --mem 210G data/valid_test_hires
+steps/make_mfcc.sh: moving data/valid_test_hires/feats.scp to data/valid_test_hires/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/valid_test_hires
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+steps/make_mfcc.sh: Succeeded creating MFCC features for valid_test_hires
+steps/compute_cmvn_stats.sh data/valid_test_hires
+Succeeded creating CMVN stats for valid_test_hires
+fix_data_dir.sh: kept all 7522 utterances.
+fix_data_dir.sh: old files are kept in data/valid_test_hires/.backup
+local/nnet3/run_ivector_common.sh: computing a subset of data to train the diagonal UBM.
+utils/data/subset_data_dir.sh: reducing #utt from 1146774 to 286693
+local/nnet3/run_ivector_common.sh: computing a PCA transform from the hires data.
+steps/online/nnet2/get_pca_transform.sh --cmd run.pl --mem 210G --splice-opts --left-context=3 --right-context=3 --max-utts 10000 --subsample 2 exp/nnet3/diag_ubm/valid_train_sp_hires_subset exp/nnet3/pca_transform
+Done estimating PCA transform in exp/nnet3/pca_transform
+local/nnet3/run_ivector_common.sh: training the diagonal UBM.
+steps/online/nnet2/train_diag_ubm.sh --cmd run.pl --mem 210G --nj 92 --num-frames 700000 --num-threads 7 exp/nnet3/diag_ubm/valid_train_sp_hires_subset 512 exp/nnet3/pca_transform exp/nnet3/diag_ubm
+steps/online/nnet2/train_diag_ubm.sh: Directory exp/nnet3/diag_ubm already exists. Backing up diagonal UBM in exp/nnet3/diag_ubm/backup.fqb
+steps/online/nnet2/train_diag_ubm.sh: initializing model from E-M in memory, 
+steps/online/nnet2/train_diag_ubm.sh: starting from 256 Gaussians, reaching 512;
+steps/online/nnet2/train_diag_ubm.sh: for 20 iterations, using at most 700000 frames of data
+Getting Gaussian-selection info
+steps/online/nnet2/train_diag_ubm.sh: will train for 4 iterations, in parallel over
+steps/online/nnet2/train_diag_ubm.sh: 92 machines, parallelized with 'run.pl --mem 210G'
+steps/online/nnet2/train_diag_ubm.sh: Training pass 0
+steps/online/nnet2/train_diag_ubm.sh: Training pass 1
+steps/online/nnet2/train_diag_ubm.sh: Training pass 2
+steps/online/nnet2/train_diag_ubm.sh: Training pass 3
+local/nnet3/run_ivector_common.sh: training the iVector extractor
+steps/online/nnet2/train_ivector_extractor.sh --cmd run.pl --mem 210G --nj 92 data/valid_train_sp_hires exp/nnet3/diag_ubm exp/nnet3/extractor
+steps/online/nnet2/train_ivector_extractor.sh: doing Gaussian selection and posterior computation
+Accumulating stats (pass 0)
+Summing accs (pass 0)
+Updating model (pass 0)
+Accumulating stats (pass 1)
+Summing accs (pass 1)
+Updating model (pass 1)
+Accumulating stats (pass 2)
+Summing accs (pass 2)
+Updating model (pass 2)
+Accumulating stats (pass 3)
+Summing accs (pass 3)
+Updating model (pass 3)
+Accumulating stats (pass 4)
+Summing accs (pass 4)
+Updating model (pass 4)
+Accumulating stats (pass 5)
+Summing accs (pass 5)
+Updating model (pass 5)
+Accumulating stats (pass 6)
+Summing accs (pass 6)
+Updating model (pass 6)
+Accumulating stats (pass 7)
+Summing accs (pass 7)
+Updating model (pass 7)
+Accumulating stats (pass 8)
+Summing accs (pass 8)
+Updating model (pass 8)
+Accumulating stats (pass 9)
+Summing accs (pass 9)
+Updating model (pass 9)
+utils/data/modify_speaker_info.sh: copied data from data/valid_train_sp_hires to exp/nnet3/ivectors_valid_train_sp_hires/valid_train_sp_hires_max2, number of speakers changed from 1146774 to 1146774
+utils/validate_data_dir.sh: Successfully validated data-directory exp/nnet3/ivectors_valid_train_sp_hires/valid_train_sp_hires_max2
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --mem 210G --nj 92 exp/nnet3/ivectors_valid_train_sp_hires/valid_train_sp_hires_max2 exp/nnet3/extractor exp/nnet3/ivectors_valid_train_sp_hires
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to exp/nnet3/ivectors_valid_train_sp_hires using the extractor in exp/nnet3/extractor.
+steps/online/nnet2/extract_ivectors_online.sh --cmd run.pl --mem 210G --nj 92 data/valid_test_hires exp/nnet3/extractor exp/nnet3/ivectors_valid_test_hires
+steps/online/nnet2/extract_ivectors_online.sh: extracting iVectors
+steps/online/nnet2/extract_ivectors_online.sh: combining iVectors across jobs
+steps/online/nnet2/extract_ivectors_online.sh: done extracting (online) iVectors to exp/nnet3/ivectors_valid_test_hires using the extractor in exp/nnet3/extractor.
+local/chain/run_tdnn.sh: creating lang directory data/lang_chain with chain-type topology
+steps/align_fmllr_lats.sh --nj 92 --cmd run.pl --mem 210G data/valid_train_sp data/lang exp/tri4b exp/chain/tri4b_valid_train_sp_lats
+steps/align_fmllr_lats.sh: feature type is lda
+steps/align_fmllr_lats.sh: compiling training graphs
+steps/align_fmllr_lats.sh: aligning data in data/valid_train_sp using exp/tri4b/final.alimdl and speaker-independent features.
+steps/align_fmllr_lats.sh: computing fMLLR transforms
+steps/align_fmllr_lats.sh: generating lattices containing alternate pronunciations.
+steps/align_fmllr_lats.sh: done generating lattices from training transcripts.
+1079175 warnings in exp/chain/tri4b_valid_train_sp_lats/log/fmllr.*.log
+10453 warnings in exp/chain/tri4b_valid_train_sp_lats/log/generate_lattices.*.log
+86567 warnings in exp/chain/tri4b_valid_train_sp_lats/log/align_pass1.*.log
+steps/nnet3/chain/build_tree.sh --frame-subsampling-factor 3 --context-opts --context-width=2 --central-position=1 --cmd run.pl --mem 210G 7000 data/valid_train_sp data/lang_chain exp/tri4b_ali_valid_train_sp exp/chain/tree_sp
+steps/nnet3/chain/build_tree.sh: feature type is lda
+steps/nnet3/chain/build_tree.sh: Using transforms from exp/tri4b_ali_valid_train_sp
+steps/nnet3/chain/build_tree.sh: Initializing monophone model (for alignment conversion, in case topology changed)
+steps/nnet3/chain/build_tree.sh: Accumulating tree stats
+steps/nnet3/chain/build_tree.sh: Getting questions for tree clustering.
+steps/nnet3/chain/build_tree.sh: Building the tree
+steps/nnet3/chain/build_tree.sh: Initializing the model
+steps/nnet3/chain/build_tree.sh: Converting alignments from exp/tri4b_ali_valid_train_sp to use current tree
+steps/nnet3/chain/build_tree.sh: Done building tree
+local/chain/run_tdnn.sh: creating neural net configs using the xconfig parser
+tree-info exp/chain/tree_sp/tree 
+nnet3-init exp/chain/tdnn1a_sp/configs//init.config exp/chain/tdnn1a_sp/configs//init.raw 
+LOG (nnet3-init[5.5.0~1547-6e63]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/chain/tdnn1a_sp/configs//init.raw
+nnet3-info exp/chain/tdnn1a_sp/configs//init.raw 
+nnet3-init exp/chain/tdnn1a_sp/configs//ref.config exp/chain/tdnn1a_sp/configs//ref.raw 
+LOG (nnet3-init[5.5.0~1547-6e63]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/chain/tdnn1a_sp/configs//ref.raw
+nnet3-info exp/chain/tdnn1a_sp/configs//ref.raw 
+nnet3-init exp/chain/tdnn1a_sp/configs//ref.config exp/chain/tdnn1a_sp/configs//ref.raw 
+LOG (nnet3-init[5.5.0~1547-6e63]:main():nnet3-init.cc:80) Initialized raw neural net and wrote it to exp/chain/tdnn1a_sp/configs//ref.raw
+nnet3-info exp/chain/tdnn1a_sp/configs//ref.raw 
+steps/nnet3/xconfig_to_configs.py --xconfig-file exp/chain/tdnn1a_sp/configs/network.xconfig --config-dir exp/chain/tdnn1a_sp/configs/
+2022-04-14 04:18:16,351 [steps/nnet3/chain/train.py:35 - <module> - INFO ] Starting chain model trainer (train.py)
+2022-04-14 04:18:16,354 [steps/nnet3/chain/train.py:258 - process_args - WARNING ] Without using a GPU this will be very slow. nnet3 does not yet support multiple threads.
+2022-04-14 04:18:16,355 [steps/nnet3/chain/train.py:284 - train - INFO ] Arguments for the experiment
+{'alignment_subsampling_factor': 3,
+ 'apply_deriv_weights': False,
+ 'backstitch_training_interval': 1,
+ 'backstitch_training_scale': 0.0,
+ 'chain_opts': '',
+ 'chunk_left_context': 0,
+ 'chunk_left_context_initial': 0,
+ 'chunk_right_context': 0,
+ 'chunk_right_context_final': 0,
+ 'chunk_width': '150,110,100',
+ 'cleanup': True,
+ 'cmvn_opts': '--norm-means=false --norm-vars=false',
+ 'combine_sum_to_one_penalty': 0.0,
+ 'command': 'run.pl --mem 210G',
+ 'compute_per_dim_accuracy': False,
+ 'deriv_truncate_margin': None,
+ 'dir': 'exp/chain/tdnn1a_sp',
+ 'do_final_combination': True,
+ 'dropout_schedule': None,
+ 'egs_command': None,
+ 'egs_dir': None,
+ 'egs_nj': 0,
+ 'egs_opts': '--frames-overlap-per-eg 0',
+ 'egs_stage': 0,
+ 'email': None,
+ 'exit_stage': None,
+ 'feat_dir': 'data/valid_train_sp_hires',
+ 'final_effective_lrate': 0.0001,
+ 'frame_subsampling_factor': 3,
+ 'frames_per_iter': 1500000,
+ 'initial_effective_lrate': 0.001,
+ 'input_model': None,
+ 'l2_regularize': 5e-05,
+ 'lat_dir': 'exp/chain/tri4b_valid_train_sp_lats',
+ 'leaky_hmm_coefficient': 0.1,
+ 'left_deriv_truncate': None,
+ 'left_tolerance': 5,
+ 'lm_opts': '--num-extra-lm-states=2000',
+ 'max_lda_jobs': 10,
+ 'max_models_combine': 20,
+ 'max_objective_evaluations': 30,
+ 'max_param_change': 2.0,
+ 'momentum': 0.0,
+ 'num_chunk_per_minibatch': '128,64',
+ 'num_epochs': 4.0,
+ 'num_jobs_final': 92,
+ 'num_jobs_initial': 80,
+ 'num_jobs_step': 1,
+ 'online_ivector_dir': 'exp/nnet3/ivectors_valid_train_sp_hires',
+ 'preserve_model_interval': 100,
+ 'presoftmax_prior_scale_power': -0.25,
+ 'proportional_shrink': 0.0,
+ 'rand_prune': 4.0,
+ 'remove_egs': False,
+ 'reporting_interval': 0.1,
+ 'right_tolerance': 5,
+ 'samples_per_iter': 400000,
+ 'shrink_saturation_threshold': 0.4,
+ 'shrink_value': 1.0,
+ 'shuffle_buffer_size': 5000,
+ 'srand': 123,
+ 'stage': -10,
+ 'train_opts': [],
+ 'tree_dir': 'exp/chain/tree_sp',
+ 'use_gpu': 'no',
+ 'xent_regularize': 0.1}
+2022-04-14 04:19:19,686 [steps/nnet3/chain/train.py:341 - train - INFO ] Creating phone language-model
+2022-04-14 04:19:44,282 [steps/nnet3/chain/train.py:346 - train - INFO ] Creating denominator FST
+copy-transition-model exp/chain/tree_sp/final.mdl exp/chain/tdnn1a_sp/0.trans_mdl 
+LOG (copy-transition-model[5.5.0~1547-6e63]:main():copy-transition-model.cc:62) Copied transition model.
+2022-04-14 04:19:45,410 [steps/nnet3/chain/train.py:353 - train - INFO ] Initializing a basic network for estimating preconditioning matrix
+2022-04-14 04:19:45,460 [steps/nnet3/chain/train.py:382 - train - INFO ] Generating egs
+steps/nnet3/chain/get_egs.sh --frames-overlap-per-eg 0 --cmd run.pl --mem 210G --cmvn-opts --norm-means=false --norm-vars=false --online-ivector-dir exp/nnet3/ivectors_valid_train_sp_hires --left-context 17 --right-context 11 --left-context-initial 17 --right-context-final 11 --left-tolerance 5 --right-tolerance 5 --frame-subsampling-factor 3 --alignment-subsampling-factor 3 --stage 0 --frames-per-iter 1500000 --frames-per-eg 150,110,100 --srand 123 data/valid_train_sp_hires exp/chain/tdnn1a_sp exp/chain/tri4b_valid_train_sp_lats exp/chain/tdnn1a_sp/egs
+steps/nnet3/chain/get_egs.sh: File data/valid_train_sp_hires/utt2uniq exists, so ensuring the hold-out set includes all perturbed versions of the same source utterance.
+steps/nnet3/chain/get_egs.sh: Holding out 300 utterances in validation set and 300 in training diagnostic set, out of total 1146774.
+steps/nnet3/chain/get_egs.sh: creating egs.  To ensure they are not deleted later you can do:  touch exp/chain/tdnn1a_sp/egs/.nodelete
+steps/nnet3/chain/get_egs.sh: feature type is raw, with 'apply-cmvn'
+tree-info exp/chain/tdnn1a_sp/tree 
+feat-to-dim scp:exp/nnet3/ivectors_valid_train_sp_hires/ivector_online.scp - 
+steps/nnet3/chain/get_egs.sh: working out number of frames of training data
+steps/nnet3/chain/get_egs.sh: working out feature dim
+steps/nnet3/chain/get_egs.sh: creating 199 archives, each with 14936 egs, with
+steps/nnet3/chain/get_egs.sh:   150,110,100 labels per example, and (left,right) context = (17,11)
+steps/nnet3/chain/get_egs.sh:   ... and (left-context-initial,right-context-final) = (17,11)
+steps/nnet3/chain/get_egs.sh: Getting validation and training subset examples in background.
+steps/nnet3/chain/get_egs.sh: Generating training examples on disk
+steps/nnet3/chain/get_egs.sh: Getting subsets of validation examples for diagnostics and combination.
+steps/nnet3/chain/get_egs.sh: recombining and shuffling order of archives on disk
+steps/nnet3/chain/get_egs.sh: Removing temporary archives, alignments and lattices
+steps/nnet3/chain/get_egs.sh: Finished preparing training examples
+2022-04-14 04:28:45,397 [steps/nnet3/chain/train.py:431 - train - INFO ] Copying the properties from exp/chain/tdnn1a_sp/egs to exp/chain/tdnn1a_sp
+2022-04-14 04:28:45,397 [steps/nnet3/chain/train.py:445 - train - INFO ] Computing the preconditioning matrix for input features
+2022-04-14 04:28:51,994 [steps/nnet3/chain/train.py:454 - train - INFO ] Preparing the initial acoustic model.
+2022-04-14 04:28:52,788 [steps/nnet3/chain/train.py:488 - train - INFO ] Training will run for 4.0 epochs = 27 iterations
+2022-04-14 04:28:52,788 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 0/26   Jobs: 80   Epoch: 0.00/4.0 (0.0% complete)   lr: 0.080000   
+2022-04-14 06:09:48,707 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 1/26   Jobs: 80   Epoch: 0.13/4.0 (3.4% complete)   lr: 0.074061   
+2022-04-14 08:42:46,634 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 2/26   Jobs: 81   Epoch: 0.27/4.0 (6.7% complete)   lr: 0.069420   
+2022-04-14 11:12:53,877 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 3/26   Jobs: 81   Epoch: 0.40/4.0 (10.1% complete)   lr: 0.064204   
+2022-04-14 13:44:48,456 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 4/26   Jobs: 82   Epoch: 0.54/4.0 (13.5% complete)   lr: 0.060114   
+2022-04-14 16:16:06,299 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 5/26   Jobs: 82   Epoch: 0.68/4.0 (16.9% complete)   lr: 0.055544   
+2022-04-14 18:48:35,854 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 6/26   Jobs: 83   Epoch: 0.81/4.0 (20.4% complete)   lr: 0.051947   
+2022-04-14 21:21:33,466 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 7/26   Jobs: 83   Epoch: 0.95/4.0 (23.8% complete)   lr: 0.047952   
+2022-04-14 23:55:10,990 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 8/26   Jobs: 84   Epoch: 1.09/4.0 (27.3% complete)   lr: 0.044797   
+2022-04-15 02:29:19,289 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 9/26   Jobs: 84   Epoch: 1.23/4.0 (30.8% complete)   lr: 0.041312   
+2022-04-15 05:03:03,481 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 10/26   Jobs: 84   Epoch: 1.37/4.0 (34.3% complete)   lr: 0.038097   
+2022-04-15 07:37:07,165 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 11/26   Jobs: 85   Epoch: 1.51/4.0 (37.9% complete)   lr: 0.035552   
+2022-04-15 10:13:55,817 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 12/26   Jobs: 85   Epoch: 1.66/4.0 (41.4% complete)   lr: 0.032754   
+2022-04-15 12:49:29,415 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 13/26   Jobs: 86   Epoch: 1.80/4.0 (45.0% complete)   lr: 0.030532   
+2022-04-15 15:25:19,318 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 14/26   Jobs: 86   Epoch: 1.94/4.0 (48.6% complete)   lr: 0.028102   
+2022-04-15 18:01:27,057 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 15/26   Jobs: 87   Epoch: 2.09/4.0 (52.2% complete)   lr: 0.026166   
+2022-04-15 20:38:29,929 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 16/26   Jobs: 87   Epoch: 2.23/4.0 (55.8% complete)   lr: 0.024061   
+2022-04-15 23:15:38,757 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 17/26   Jobs: 88   Epoch: 2.38/4.0 (59.5% complete)   lr: 0.022379   
+2022-04-16 01:53:52,541 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 18/26   Jobs: 88   Epoch: 2.53/4.0 (63.1% complete)   lr: 0.020559   
+2022-04-16 04:30:33,198 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 19/26   Jobs: 88   Epoch: 2.67/4.0 (66.8% complete)   lr: 0.018886   
+2022-04-16 07:07:43,778 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 20/26   Jobs: 89   Epoch: 2.82/4.0 (70.5% complete)   lr: 0.017547   
+2022-04-16 09:46:00,392 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 21/26   Jobs: 89   Epoch: 2.97/4.0 (74.2% complete)   lr: 0.016104   
+2022-04-16 12:25:10,605 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 22/26   Jobs: 90   Epoch: 3.12/4.0 (78.0% complete)   lr: 0.014946   
+2022-04-16 15:03:54,510 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 23/26   Jobs: 90   Epoch: 3.27/4.0 (81.7% complete)   lr: 0.013703   
+2022-04-16 17:41:47,309 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 24/26   Jobs: 91   Epoch: 3.42/4.0 (85.5% complete)   lr: 0.012704   
+2022-04-16 20:20:54,377 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 25/26   Jobs: 91   Epoch: 3.57/4.0 (89.3% complete)   lr: 0.011637   
+2022-04-16 23:00:35,476 [steps/nnet3/chain/train.py:535 - train - INFO ] Iter: 26/26   Jobs: 92   Epoch: 3.73/4.0 (93.1% complete)   lr: 0.009200   
+2022-04-17 01:40:54,771 [steps/nnet3/chain/train.py:592 - train - INFO ] Doing final combination to produce final.mdl
+2022-04-17 01:40:54,771 [steps/libs/nnet3/train/chain_objf/acoustic_model.py:571 - combine_models - INFO ] Combining {15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27} models.
+2022-04-17 01:45:09,251 [steps/nnet3/chain/train.py:621 - train - INFO ] Cleaning up the experiment directory exp/chain/tdnn1a_sp
+exp/chain/tdnn1a_sp: num-iters=27 nj=80..92 num-params=17.5M dim=40+100->3952 combine=-0.248->-0.248 (over 1) xent:train/valid[17,26]=(-2.73,-2.56/-2.62,-2.48) logprob:train/valid[17,26]=(-0.254,-0.236/-0.252,-0.236)
+steps/nnet3/chain/train.py --stage=-10 --cmd=run.pl --mem 210G --feat.online-ivector-dir=exp/nnet3/ivectors_valid_train_sp_hires --feat.cmvn-opts=--norm-means=false --norm-vars=false --chain.xent-regularize 0.1 --chain.leaky-hmm-coefficient=0.1 --chain.l2-regularize=0.00005 --chain.apply-deriv-weights=false --chain.lm-opts=--num-extra-lm-states=2000 --trainer.srand=123 --trainer.max-param-change=2.0 --trainer.num-epochs=4 --trainer.frames-per-iter=1500000 --trainer.optimization.num-jobs-initial=80 --trainer.optimization.num-jobs-final=92 --trainer.optimization.initial-effective-lrate=0.001 --trainer.optimization.final-effective-lrate=0.0001 --trainer.optimization.shrink-value=1.0 --trainer.num-chunk-per-minibatch=128,64 --trainer.optimization.momentum=0.0 --egs.chunk-width=150,110,100 --egs.chunk-left-context=0 --egs.chunk-right-context=0 --egs.chunk-left-context-initial=0 --egs.chunk-right-context-final=0 --egs.dir= --egs.opts=--frames-overlap-per-eg 0 --cleanup.remove-egs=false --use-gpu=false --reporting.email= --feat-dir=data/valid_train_sp_hires --tree-dir=exp/chain/tree_sp --lat-dir=exp/chain/tri4b_valid_train_sp_lats --dir=exp/chain/tdnn1a_sp
+['steps/nnet3/chain/train.py', '--stage=-10', '--cmd=run.pl --mem 210G', '--feat.online-ivector-dir=exp/nnet3/ivectors_valid_train_sp_hires', '--feat.cmvn-opts=--norm-means=false --norm-vars=false', '--chain.xent-regularize', '0.1', '--chain.leaky-hmm-coefficient=0.1', '--chain.l2-regularize=0.00005', '--chain.apply-deriv-weights=false', '--chain.lm-opts=--num-extra-lm-states=2000', '--trainer.srand=123', '--trainer.max-param-change=2.0', '--trainer.num-epochs=4', '--trainer.frames-per-iter=1500000', '--trainer.optimization.num-jobs-initial=80', '--trainer.optimization.num-jobs-final=92', '--trainer.optimization.initial-effective-lrate=0.001', '--trainer.optimization.final-effective-lrate=0.0001', '--trainer.optimization.shrink-value=1.0', '--trainer.num-chunk-per-minibatch=128,64', '--trainer.optimization.momentum=0.0', '--egs.chunk-width=150,110,100', '--egs.chunk-left-context=0', '--egs.chunk-right-context=0', '--egs.chunk-left-context-initial=0', '--egs.chunk-right-context-final=0', '--egs.dir=', '--egs.opts=--frames-overlap-per-eg 0', '--cleanup.remove-egs=false', '--use-gpu=false', '--reporting.email=', '--feat-dir=data/valid_train_sp_hires', '--tree-dir=exp/chain/tree_sp', '--lat-dir=exp/chain/tri4b_valid_train_sp_lats', '--dir=exp/chain/tdnn1a_sp']
+tree-info exp/chain/tree_sp/tree 
+tree-info exp/chain/tree_sp/tree 
+fstcomposecontext --context-size=2 --central-position=1 --read-disambig-syms=data/lang_test/phones/disambig.int --write-disambig-syms=data/lang_test/tmp/disambig_ilabels_2_1.int data/lang_test/tmp/ilabels_2_1.36652 data/lang_test/tmp/LG.fst 
+fstisstochastic data/lang_test/tmp/CLG_2_1.fst 
+0.00929834 0.008409
+make-h-transducer --disambig-syms-out=exp/chain/tree_sp/graph/disambig_tid.int --transition-scale=1.0 data/lang_test/tmp/ilabels_2_1 exp/chain/tree_sp/tree exp/chain/tree_sp/final.mdl 
+fstrmsymbols exp/chain/tree_sp/graph/disambig_tid.int 
+fstrmepslocal 
+fstminimizeencoded 
+fstdeterminizestar --use-log=true 
+fsttablecompose exp/chain/tree_sp/graph/Ha.fst data/lang_test/tmp/CLG_2_1.fst 
+fstisstochastic exp/chain/tree_sp/graph/HCLGa.fst 
+0.0350619 0.00878906
+HCLGa is not stochastic
+add-self-loops --self-loop-scale=1.0 --reorder=true exp/chain/tree_sp/final.mdl exp/chain/tree_sp/graph/HCLGa.fst 
+fstisstochastic exp/chain/tree_sp/graph/HCLG.fst 
+0.0262877 1.90465e-09
+[info]: final HCLG is not stochastic.
+steps/nnet3/decode.sh --acwt 1.0 --post-decode-acwt 10.0 --extra-left-context 0 --extra-right-context 0 --extra-left-context-initial 0 --extra-right-context-final 0 --frames-per-chunk 150 --nj 7522 --cmd run.pl --mem 210G --num-threads 4 --online-ivector-dir exp/nnet3/ivectors_valid_test_hires exp/chain/tree_sp/graph data/valid_test_hires exp/chain/tdnn1a_sp/decode_valid_test
+steps/nnet3/decode.sh: feature type is raw
+steps/diagnostic/analyze_lats.sh --cmd run.pl --mem 210G --iter final exp/chain/tree_sp/graph exp/chain/tdnn1a_sp/decode_valid_test
+analyze_phone_length_stats.py: WARNING: optional-silence SIL is seen only 23.19861738899229% of the time at utterance begin.  This may not be optimal.
+steps/diagnostic/analyze_lats.sh: see stats in exp/chain/tdnn1a_sp/decode_valid_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(6,61,492) and mean=191.2
+steps/diagnostic/analyze_lats.sh: see stats in exp/chain/tdnn1a_sp/decode_valid_test/log/analyze_lattice_depth_stats.log
+score best paths
+local/score.sh --cmd run.pl --mem 210G data/valid_test_hires exp/chain/tree_sp/graph exp/chain/tdnn1a_sp/decode_valid_test
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
+score confidence and timing with sclite
+Decoding done.
+steps/online/nnet3/prepare_online_decoding.sh --mfcc-config conf/mfcc_hires.conf data/lang_chain exp/nnet3/extractor exp/chain/tdnn1a_sp exp/chain/tdnn1a_sp_online
+steps/online/nnet3/prepare_online_decoding.sh: preparing configuration files in /root/kaldi/egs/commonvoice/s5/exp/chain/tdnn1a_sp_online/conf
+steps/online/nnet3/prepare_online_decoding.sh: created config file /root/kaldi/egs/commonvoice/s5/exp/chain/tdnn1a_sp_online/conf/online.conf
+steps/online/nnet3/decode.sh --acwt 1.0 --post-decode-acwt 10.0 --nj 7522 --cmd run.pl --mem 210G exp/chain/tree_sp/graph data/valid_test exp/chain/tdnn1a_sp_online/decode_valid_test
+local/score.sh --cmd run.pl --mem 210G data/valid_test exp/chain/tree_sp/graph exp/chain/tdnn1a_sp_online/decode_valid_test
+local/score.sh: scoring with word insertion penalty=0.0,0.5,1.0
